@@ -14,27 +14,27 @@ namespace PosProject_2.FormChildren
     public partial class PayAction : Form
     {
         public string NameTable { get; set; }
-        DataPoSContext dataContext;
+        //DataPoSContext dataContext;
         public List<ItemPayDetail> OrderedItems;
-        public int TotalCash { get; set; } 
+        public int TotalCash { get; set; }
+        string nameStaff;
         public PayAction()
         {
             InitializeComponent();
         }
-        public PayAction(string nameTable, List<CacBanCoDon> billTemps)
+        public PayAction(string nameTable, List<CacBanCoDon> billTemps, string nameStaff)
         {
             //dataContext = new DataPoSContext();
             this.NameTable = nameTable;
+            this.nameStaff = nameStaff;
             SetOrderedItems(billTemps);
             InitializeComponent();
-            LoadDataIToForm();
         }
         void LoadDataIToForm()
         {
             int indentity = 0;
             this.TotalCash = 0;
-            //List<NhanVien> staffs = dataContext.NhanViens.Where(s => s.isOnline == true).ToList();
-            //this.lbStaffName.Text = staffs.Count != 0 ? staffs[0].ten_nhanVien : "";
+            this.lbStaffName.Text = this.nameStaff;
             this.lbTableName.Text = this.NameTable;
             foreach (var item in OrderedItems)
             {
@@ -69,6 +69,11 @@ namespace PosProject_2.FormChildren
                 );
                 this.OrderedItems.Add(itemPay);
             }
+        }
+
+        private void PayAction_Activated(object sender, EventArgs e)
+        {
+            LoadDataIToForm();
         }
     }
 }

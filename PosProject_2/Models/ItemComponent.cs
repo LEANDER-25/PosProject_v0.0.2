@@ -87,4 +87,21 @@ namespace PosProject_2.Models
         }
 
     }
+    public class ItemOrdered : ItemProduct
+    {
+        public int IDTable { get; set; }
+        public int Amount { get; set; }
+        public ItemOrdered()
+        {
+
+        }
+        public ItemOrdered(int idTable, int idProdct, string name,int amount, int price)
+        {
+            this.IDTable = idTable;
+            this.ID = idProdct;
+            this.Name = name;
+            this.Amount = amount;
+            this.Price = price;
+        }
+    }
 }

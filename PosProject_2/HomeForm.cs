@@ -47,7 +47,7 @@ namespace PosProject_2
             List<NhanVien> staffs = dataContext.NhanViens.Where(s => s.id_nhanVien == this.IDStaff).ToList();
             this.lbStaffName.Text = staffs[0].ten_nhanVien;
             this.lbStaffPosition.Text = "Vị trí: " + staffs[0].chucVu;
-            //MarkStaffState(StaffState.Online);
+            MarkStaffState(StaffState.Online);
             StartTime();
         }
 
@@ -104,6 +104,10 @@ namespace PosProject_2
                 areaButton.Click += AreaButton_Click;
                 this.flowAreas.Controls.Add(areaButton);
             }
+            if(this.flowAreas.Controls.Count > 0)
+            {
+                AreaButton_Click(this.flowAreas.Controls[0], new EventArgs());
+            }
         }
 
         private void AreaButton_Click(object sender, EventArgs e)
@@ -117,7 +121,11 @@ namespace PosProject_2
             var result = from staff in dataContext.NhanViens
                          where staff.id_nhanVien == IDStaff
                          select staff.chucVu;
-            if (result.Equals("Quản lý")) { }
+            if (result.First().Equals("Quản lý")) 
+            {
+                Console.WriteLine("Setting form");
+                return;
+            }
             else
             {
                 MessageBox.Show("Rất tiếc! Chỉ có vị trí Quản lý mới được sử dụng chức năng này", "Vị trí bị giới hạn", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -126,11 +134,11 @@ namespace PosProject_2
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //MarkStaffState(StaffState.Offline);
+            MarkStaffState(StaffState.Offline);
             Application.Exit();
         }
     }
-    enum StaffState
+    public enum StaffState
     {
         Online,
         Offline

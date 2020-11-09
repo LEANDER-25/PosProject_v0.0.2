@@ -15,6 +15,7 @@ namespace PosProject_2.FormChildren
     {
         DataPoSContext dataContext;
         Form searchResultForm;
+        private List<ItemOrdered> Ordereds;
         public int IDThisTable { get; set; }
         public OrderedForm()
         {
@@ -24,7 +25,22 @@ namespace PosProject_2.FormChildren
         {
             this.IDThisTable = idThisTable;
             dataContext = new DataPoSContext();
+            Ordereds = new List<ItemOrdered>();
             InitializeComponent();
+        }
+        public List<ItemOrdered> GetOrdereds()
+        {
+            foreach (SelectedItemButton item in this.flowSelectProduct.Controls)
+            {
+                ItemOrdered itemOrdered = new ItemOrdered();
+                itemOrdered.IDTable = this.IDThisTable;
+                itemOrdered.ID = item.IDItem;
+                itemOrdered.Name = item.Name;
+                itemOrdered.Price = item.Price;
+                itemOrdered.Amount = item.Amount;
+                Ordereds.Add(itemOrdered);
+            }
+            return Ordereds;
         }
         void LoadDataToForm()
         {
@@ -139,10 +155,12 @@ namespace PosProject_2.FormChildren
                 int idProduct = Int32.Parse(list.SelectedItems[0].Name);
                 SelectedItemButton selectedItem = new SelectedItemButton(idProduct, 1);
                 selectedItem.btnRemoveThis.Click += BtnRemoveThis_Click;
-                if (IsItemExistInFlowPanel(selectedItem)) 
+                if (IsItemExistInFlowPanel(selectedItem))
                     return;
                 else
+                {
                     this.flowSelectProduct.Controls.Add(selectedItem);
+                }
             }
         }
         bool IsItemExistInFlowPanel(SelectedItemButton item)

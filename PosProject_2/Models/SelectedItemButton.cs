@@ -14,6 +14,7 @@ namespace PosProject_2.Models
     {
         public int IDItem { get; set; }
         int amount;
+        public int Price { get; set; }
         public int Amount { get { return amount; } set { amount = value; this.txtAmount.Text = amount.ToString(); } }
         public SelectedItemButton()
         {
@@ -33,11 +34,10 @@ namespace PosProject_2.Models
             var result = from item in data.SanPhams
                          where item.id_sp == IDItem
                          select item;
-            foreach (var item in result)
-            {
-                this.label1.Text = item.ten_sp;
-                this.label2.Text = item.giaBan.ToString();
-            }
+            this.Name = result.First().ten_sp;
+            this.label1.Text = result.First().ten_sp;
+            this.label2.Text = result.First().giaBan.ToString();
+            this.Price = result.First().giaBan.Value;
             this.txtAmount.Text = Amount.ToString();
         }
 
@@ -47,13 +47,13 @@ namespace PosProject_2.Models
             {
                 return;
             }
-            Amount--;
+            amount--;
             this.txtAmount.Text = Amount.ToString();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            Amount++;
+            amount++;
             this.txtAmount.Text = Amount.ToString();
         }
 

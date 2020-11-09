@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.lbAreaName = new System.Windows.Forms.Label();
+            this.lbNotice = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbAreaName
@@ -44,10 +45,21 @@
             this.lbAreaName.Text = "label1";
             this.lbAreaName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // lbNotice
+            // 
+            this.lbNotice.AutoSize = true;
+            this.lbNotice.ForeColor = System.Drawing.Color.Transparent;
+            this.lbNotice.Location = new System.Drawing.Point(131, 0);
+            this.lbNotice.Name = "lbNotice";
+            this.lbNotice.Size = new System.Drawing.Size(19, 17);
+            this.lbNotice.TabIndex = 1;
+            this.lbNotice.Text = "O";
+            // 
             // AreaButton
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.lbNotice);
             this.Controls.Add(this.lbAreaName);
             this.Name = "AreaButton";
             this.Size = new System.Drawing.Size(150, 57);
@@ -59,5 +71,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbAreaName;
+        private System.Windows.Forms.Label lbNotice;
     }
 }
