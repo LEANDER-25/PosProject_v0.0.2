@@ -149,18 +149,26 @@ namespace PosProject_2.FormChildren
                     {
                         for (int i = 0; i < savedItems.Count; i++)
                         {
-                            if(ordereds[i].ID == savedItems[i].id_sp && ordereds[i].Amount > savedItems[i].soLuongYeuCau)
+                            if (ordereds[i].ID == savedItems[i].id_sp)
                             {
-                                existAmountItems.Add(ordereds[i].ID, ordereds[i].Amount - savedItems[i].soLuongYeuCau.Value);
+                                if (ordereds[i].Amount > savedItems[i].soLuongYeuCau)
+                                {
+                                    flag = 2;
+                                    existAmountItems.Add(ordereds[i].ID, ordereds[i].Amount - savedItems[i].soLuongYeuCau.Value);
+                                }
+                                else if (ordereds[i].Amount < savedItems[i].soLuongYeuCau)
+                                {
+                                    flag = 1;
+                                    break;
+                                }
+                                else
+                                {
+                                    continue;
+                                }
                             }
-                            else if (ordereds[i].ID != savedItems[i].id_sp || ordereds[i].Amount < savedItems[i].soLuongYeuCau)
+                            else if (ordereds[i].ID != savedItems[i].id_sp)
                             {
                                 flag = 1;
-                                break;
-                            }
-                            else
-                            {
-                                flag = 2;
                                 break;
                             }
                         }
