@@ -82,6 +82,24 @@
     <Compile Include="FormChildren\SetOrderForm.Designer.cs">
       <DependentUpon>SetOrderForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChildren\SettingChildForms\SpaceSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\SpaceSettingForm.Designer.cs">
+      <DependentUpon>SpaceSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.Designer.cs">
+      <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChildren\TablesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +148,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SetOrderForm.resx">
       <DependentUpon>SetOrderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\SpaceSettingForm.resx">
+      <DependentUpon>SpaceSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StaffSettingForm.resx">
+      <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\TablesForm.resx">
       <DependentUpon>TablesForm.cs</DependentUpon>

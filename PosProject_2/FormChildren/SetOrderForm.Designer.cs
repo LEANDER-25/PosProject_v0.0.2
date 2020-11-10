@@ -32,7 +32,6 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.lbTableName = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.btnSave = new System.Windows.Forms.Button();
             this.btnPay = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -48,7 +47,6 @@
             // 
             this.panel2.Controls.Add(this.lbTableName);
             this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Controls.Add(this.btnSave);
             this.panel2.Controls.Add(this.btnPay);
             this.panel2.Location = new System.Drawing.Point(12, 486);
             this.panel2.Name = "panel2";
@@ -80,21 +78,6 @@
             this.btnBack.UseVisualStyleBackColor = false;
             this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
-            // btnSave
-            // 
-            this.btnSave.BackColor = System.Drawing.Color.HotPink;
-            this.btnSave.FlatAppearance.BorderSize = 0;
-            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSave.ForeColor = System.Drawing.Color.White;
-            this.btnSave.Location = new System.Drawing.Point(678, 3);
-            this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(123, 58);
-            this.btnSave.TabIndex = 1;
-            this.btnSave.Text = "Lưu";
-            this.btnSave.UseVisualStyleBackColor = false;
-            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
-            // 
             // btnPay
             // 
             this.btnPay.BackColor = System.Drawing.Color.Crimson;
@@ -102,9 +85,9 @@
             this.btnPay.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnPay.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPay.ForeColor = System.Drawing.Color.White;
-            this.btnPay.Location = new System.Drawing.Point(807, 3);
+            this.btnPay.Location = new System.Drawing.Point(532, 3);
             this.btnPay.Name = "btnPay";
-            this.btnPay.Size = new System.Drawing.Size(123, 58);
+            this.btnPay.Size = new System.Drawing.Size(398, 58);
             this.btnPay.TabIndex = 0;
             this.btnPay.Text = "Thanh toán";
             this.btnPay.UseVisualStyleBackColor = false;
@@ -134,7 +117,6 @@
         private System.Windows.Forms.Panel pnlThisTableContent;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Button btnBack;
-        private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnPay;
         private System.Windows.Forms.Label lbTableName;
     }

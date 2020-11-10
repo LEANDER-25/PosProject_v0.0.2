@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnMinimum = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
             this.panelChildFormShow = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.lbStaffPosition = new System.Windows.Forms.Label();
+            this.lbCurrentTime = new System.Windows.Forms.Label();
+            this.lbStaffName = new System.Windows.Forms.Label();
             this.panelAreas = new System.Windows.Forms.Panel();
             this.flowAreas = new System.Windows.Forms.FlowLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.lbStaffPosition = new System.Windows.Forms.Label();
-            this.lbCurrentTime = new System.Windows.Forms.Label();
-            this.lbStaffName = new System.Windows.Forms.Label();
-            this.btnExit = new System.Windows.Forms.Button();
-            this.btnMinimum = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelChildFormShow.SuspendLayout();
-            this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -59,6 +59,34 @@
             this.panel1.Size = new System.Drawing.Size(980, 39);
             this.panel1.TabIndex = 0;
             // 
+            // btnMinimum
+            // 
+            this.btnMinimum.FlatAppearance.BorderSize = 0;
+            this.btnMinimum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnMinimum.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMinimum.ForeColor = System.Drawing.Color.Lime;
+            this.btnMinimum.Location = new System.Drawing.Point(908, 4);
+            this.btnMinimum.Name = "btnMinimum";
+            this.btnMinimum.Size = new System.Drawing.Size(31, 29);
+            this.btnMinimum.TabIndex = 2;
+            this.btnMinimum.Text = "O";
+            this.btnMinimum.UseVisualStyleBackColor = true;
+            this.btnMinimum.Click += new System.EventHandler(this.btnMinimum_Click);
+            // 
+            // btnExit
+            // 
+            this.btnExit.FlatAppearance.BorderSize = 0;
+            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnExit.ForeColor = System.Drawing.Color.Crimson;
+            this.btnExit.Location = new System.Drawing.Point(945, 4);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(31, 29);
+            this.btnExit.TabIndex = 0;
+            this.btnExit.Text = "O";
+            this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
+            // 
             // panelChildFormShow
             // 
             this.panelChildFormShow.Controls.Add(this.panel3);
@@ -70,6 +98,43 @@
             this.panelChildFormShow.Size = new System.Drawing.Size(980, 661);
             this.panelChildFormShow.TabIndex = 1;
             // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.lbStaffPosition);
+            this.panel3.Controls.Add(this.lbCurrentTime);
+            this.panel3.Controls.Add(this.lbStaffName);
+            this.panel3.Location = new System.Drawing.Point(5, 6);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(975, 89);
+            this.panel3.TabIndex = 2;
+            // 
+            // lbStaffPosition
+            // 
+            this.lbStaffPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStaffPosition.Location = new System.Drawing.Point(13, 47);
+            this.lbStaffPosition.Name = "lbStaffPosition";
+            this.lbStaffPosition.Size = new System.Drawing.Size(294, 28);
+            this.lbStaffPosition.TabIndex = 6;
+            this.lbStaffPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbCurrentTime
+            // 
+            this.lbCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurrentTime.Location = new System.Drawing.Point(788, 14);
+            this.lbCurrentTime.Name = "lbCurrentTime";
+            this.lbCurrentTime.Size = new System.Drawing.Size(174, 61);
+            this.lbCurrentTime.TabIndex = 5;
+            this.lbCurrentTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbStaffName
+            // 
+            this.lbStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbStaffName.Location = new System.Drawing.Point(13, 14);
+            this.lbStaffName.Name = "lbStaffName";
+            this.lbStaffName.Size = new System.Drawing.Size(294, 28);
+            this.lbStaffName.TabIndex = 4;
+            this.lbStaffName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // panelAreas
             // 
             this.panelAreas.Location = new System.Drawing.Point(5, 164);
@@ -79,6 +144,7 @@
             // 
             // flowAreas
             // 
+            this.flowAreas.AutoScroll = true;
             this.flowAreas.Location = new System.Drawing.Point(12, 101);
             this.flowAreas.Name = "flowAreas";
             this.flowAreas.Size = new System.Drawing.Size(956, 57);
@@ -133,70 +199,7 @@
             this.btnLogOut.TabIndex = 0;
             this.btnLogOut.Text = "Đăng xuất";
             this.btnLogOut.UseVisualStyleBackColor = false;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.lbStaffPosition);
-            this.panel3.Controls.Add(this.lbCurrentTime);
-            this.panel3.Controls.Add(this.lbStaffName);
-            this.panel3.Location = new System.Drawing.Point(5, 6);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(975, 89);
-            this.panel3.TabIndex = 2;
-            // 
-            // lbStaffPosition
-            // 
-            this.lbStaffPosition.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStaffPosition.Location = new System.Drawing.Point(13, 47);
-            this.lbStaffPosition.Name = "lbStaffPosition";
-            this.lbStaffPosition.Size = new System.Drawing.Size(294, 28);
-            this.lbStaffPosition.TabIndex = 6;
-            this.lbStaffPosition.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbCurrentTime
-            // 
-            this.lbCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrentTime.Location = new System.Drawing.Point(788, 14);
-            this.lbCurrentTime.Name = "lbCurrentTime";
-            this.lbCurrentTime.Size = new System.Drawing.Size(174, 61);
-            this.lbCurrentTime.TabIndex = 5;
-            this.lbCurrentTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // lbStaffName
-            // 
-            this.lbStaffName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbStaffName.Location = new System.Drawing.Point(13, 14);
-            this.lbStaffName.Name = "lbStaffName";
-            this.lbStaffName.Size = new System.Drawing.Size(294, 28);
-            this.lbStaffName.TabIndex = 4;
-            this.lbStaffName.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // btnExit
-            // 
-            this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnExit.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnExit.ForeColor = System.Drawing.Color.Crimson;
-            this.btnExit.Location = new System.Drawing.Point(945, 4);
-            this.btnExit.Name = "btnExit";
-            this.btnExit.Size = new System.Drawing.Size(31, 29);
-            this.btnExit.TabIndex = 0;
-            this.btnExit.Text = "O";
-            this.btnExit.UseVisualStyleBackColor = true;
-            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
-            // 
-            // btnMinimum
-            // 
-            this.btnMinimum.FlatAppearance.BorderSize = 0;
-            this.btnMinimum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnMinimum.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMinimum.ForeColor = System.Drawing.Color.Lime;
-            this.btnMinimum.Location = new System.Drawing.Point(908, 4);
-            this.btnMinimum.Name = "btnMinimum";
-            this.btnMinimum.Size = new System.Drawing.Size(31, 29);
-            this.btnMinimum.TabIndex = 2;
-            this.btnMinimum.Text = "O";
-            this.btnMinimum.UseVisualStyleBackColor = true;
+            this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
             // HomeForm
             // 
@@ -214,8 +217,8 @@
             this.Activated += new System.EventHandler(this.HomeForm_Activated);
             this.panel1.ResumeLayout(false);
             this.panelChildFormShow.ResumeLayout(false);
-            this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

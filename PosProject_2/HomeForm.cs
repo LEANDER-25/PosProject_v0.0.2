@@ -19,6 +19,7 @@ namespace PosProject_2
         Timer t = null;
         DataPoSContext dataContext;
         public Form activeForm;
+        System.Threading.Thread thread;
         public HomeForm()
         {
             InitializeComponent();
@@ -71,21 +72,20 @@ namespace PosProject_2
             }
         }
 
-        void OpenTablesForm(int idTable)
+        void OpenTablesForm(Form child)
         {
             if (activeForm != null)
             {
                 activeForm.Close();
             }
-            TablesForm tablesForm = new TablesForm(idTable);
-            activeForm = tablesForm;
-            tablesForm.TopLevel = false;
+            activeForm = child;
+            child.TopLevel = false;
             //tablesForm.Dock = DockStyle.Fill;
-            this.panelAreas.Controls.Add(tablesForm);
-            this.panelAreas.Tag = tablesForm;
-            this.ActivateMdiChild(tablesForm);
-            tablesForm.BringToFront();
-            tablesForm.Show();
+            this.panelAreas.Controls.Add(child);
+            this.panelAreas.Tag = child;
+            this.ActivateMdiChild(child);
+            child.BringToFront();
+            child.Show();
         }
 
         private void HomeForm_Activated(object sender, EventArgs e)
@@ -113,7 +113,7 @@ namespace PosProject_2
         private void AreaButton_Click(object sender, EventArgs e)
         {
             AreaButton btn = sender as AreaButton;
-            OpenTablesForm(Int32.Parse(btn.Name));
+            OpenTablesForm(new TablesForm(Int32.Parse(btn.Name)));
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -123,7 +123,7 @@ namespace PosProject_2
                          select staff.chucVu;
             if (result.First().Equals("Quản lý")) 
             {
-                Console.WriteLine("Setting form");
+                OpenTablesForm(new SettingForm());
                 return;
             }
             else
@@ -136,6 +136,27 @@ namespace PosProject_2
         {
             MarkStaffState(StaffState.Offline);
             Application.Exit();
+        }        
+
+        private void btnLogOut_Click(object sender, EventArgs e)
+        {
+            void OpenLoginForm()
+            {
+                Application.Run(new Form1());
+            }
+            MarkStaffState(StaffState.Offline);
+            this.Close();
+            thread = new System.Threading.Thread(OpenLoginForm);
+            thread.SetApartmentState(System.Threading.ApartmentState.STA);
+            thread.Start();
+        }
+
+        private void btnMinimum_Click(object sender, EventArgs e)
+        {
+            if(this.WindowState == FormWindowState.Normal)
+            {
+                this.WindowState = FormWindowState.Minimized;
+            }
         }
     }
     public enum StaffState

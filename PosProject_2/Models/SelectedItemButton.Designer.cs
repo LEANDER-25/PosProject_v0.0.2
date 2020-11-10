@@ -40,7 +40,7 @@
             // 
             // btnRemoveThis
             // 
-            this.btnRemoveThis.Location = new System.Drawing.Point(227, 9);
+            this.btnRemoveThis.Location = new System.Drawing.Point(198, 9);
             this.btnRemoveThis.Name = "btnRemoveThis";
             this.btnRemoveThis.Size = new System.Drawing.Size(48, 34);
             this.btnRemoveThis.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.panel1.Controls.Add(this.txtAmount);
             this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.btnSub);
-            this.panel1.Location = new System.Drawing.Point(281, 4);
+            this.panel1.Location = new System.Drawing.Point(252, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(110, 43);
             this.panel1.TabIndex = 1;
@@ -93,16 +93,16 @@
             this.label1.AutoEllipsis = true;
             this.label1.Location = new System.Drawing.Point(3, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 23);
+            this.label1.Size = new System.Drawing.Size(103, 23);
             this.label1.TabIndex = 2;
             this.label1.Text = "label1";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(125, 15);
+            this.label2.Location = new System.Drawing.Point(112, 16);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(96, 23);
+            this.label2.Size = new System.Drawing.Size(80, 23);
             this.label2.TabIndex = 3;
             this.label2.Text = "label2";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -115,7 +115,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnRemoveThis);
             this.Name = "SelectedItemButton";
-            this.Size = new System.Drawing.Size(394, 50);
+            this.Size = new System.Drawing.Size(368, 50);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

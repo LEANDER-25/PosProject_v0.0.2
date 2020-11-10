@@ -44,6 +44,7 @@ namespace PosProject_2.Models
             {
                 this.lbNotice.Text = count.ToString();
                 this.lbNotice.Font = new Font("Microsoft Sans Serif", 8, FontStyle.Bold);
+                this.lbNotice.BackColor = Color.White;
                 this.lbNotice.ForeColor = Color.Red;
             }
         }

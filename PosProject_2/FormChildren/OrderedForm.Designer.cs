@@ -35,6 +35,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.flowSelectProduct = new System.Windows.Forms.FlowLayoutPanel();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
             this.panelItems.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -94,10 +95,11 @@
             // 
             // flowSelectProduct
             // 
+            this.flowSelectProduct.AutoScroll = true;
             this.flowSelectProduct.BackColor = System.Drawing.Color.BlanchedAlmond;
             this.flowSelectProduct.Location = new System.Drawing.Point(532, 74);
             this.flowSelectProduct.Name = "flowSelectProduct";
-            this.flowSelectProduct.Size = new System.Drawing.Size(398, 389);
+            this.flowSelectProduct.Size = new System.Drawing.Size(398, 324);
             this.flowSelectProduct.TabIndex = 8;
             // 
             // txtSearch
@@ -112,10 +114,25 @@
             this.txtSearch.TabIndex = 5;
             this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
+            // btnSave
+            // 
+            this.btnSave.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSave.ForeColor = System.Drawing.Color.White;
+            this.btnSave.Location = new System.Drawing.Point(532, 404);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(398, 61);
+            this.btnSave.TabIndex = 13;
+            this.btnSave.Text = "Lưu";
+            this.btnSave.UseVisualStyleBackColor = false;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
             // OrderedForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(933, 467);
+            this.Controls.Add(this.btnSave);
             this.Controls.Add(this.txtSearch);
             this.Controls.Add(this.panelItems);
             this.Controls.Add(this.btnSearch);
@@ -141,5 +158,6 @@
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.FlowLayoutPanel flowSelectProduct;
         private System.Windows.Forms.TextBox txtSearch;
+        private System.Windows.Forms.Button btnSave;
     }
 }
