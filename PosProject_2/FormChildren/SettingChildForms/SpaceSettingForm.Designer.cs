@@ -29,22 +29,22 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.lbCheckOut = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.lbCheckOutArea = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox3 = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.lbCheckOutTable = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.lbCheckOutArea = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
+            this.lbCheckOut = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -67,61 +67,37 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Bàn";
             // 
-            // groupBox1
+            // label4
             // 
-            this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Controls.Add(this.lbCheckOut);
-            this.groupBox1.Controls.Add(this.textBox1);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(736, 198);
-            this.groupBox1.TabIndex = 2;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Khu vực";
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(149, 67);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(61, 17);
+            this.label4.TabIndex = 14;
+            this.label4.Text = "Tên bàn";
             // 
-            // textBox1
+            // lbCheckOutArea
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
-            this.textBox1.TabIndex = 0;
+            this.lbCheckOutArea.Location = new System.Drawing.Point(469, 39);
+            this.lbCheckOutArea.Name = "lbCheckOutArea";
+            this.lbCheckOutArea.Size = new System.Drawing.Size(22, 22);
+            this.lbCheckOutArea.TabIndex = 13;
             // 
-            // lbCheckOut
+            // label3
             // 
-            this.lbCheckOut.Location = new System.Drawing.Point(469, 63);
-            this.lbCheckOut.Name = "lbCheckOut";
-            this.lbCheckOut.Size = new System.Drawing.Size(22, 22);
-            this.lbCheckOut.TabIndex = 1;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(149, 42);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(86, 17);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Tên khu vực";
             // 
-            // button1
+            // textBox3
             // 
-            this.button1.Location = new System.Drawing.Point(244, 118);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(70, 30);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Thêm";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(320, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(396, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 30);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Đổi tên";
-            this.button3.UseVisualStyleBackColor = true;
+            this.textBox3.Location = new System.Drawing.Point(241, 39);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(222, 22);
+            this.textBox3.TabIndex = 10;
             // 
             // button4
             // 
@@ -164,37 +140,20 @@
             this.textBox2.Size = new System.Drawing.Size(222, 22);
             this.textBox2.TabIndex = 5;
             // 
-            // textBox3
+            // groupBox1
             // 
-            this.textBox3.Location = new System.Drawing.Point(241, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 22);
-            this.textBox3.TabIndex = 10;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 42);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(86, 17);
-            this.label3.TabIndex = 12;
-            this.label3.Text = "Tên khu vực";
-            // 
-            // lbCheckOutArea
-            // 
-            this.lbCheckOutArea.Location = new System.Drawing.Point(469, 39);
-            this.lbCheckOutArea.Name = "lbCheckOutArea";
-            this.lbCheckOutArea.Size = new System.Drawing.Size(22, 22);
-            this.lbCheckOutArea.TabIndex = 13;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(149, 67);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(61, 17);
-            this.label4.TabIndex = 14;
-            this.label4.Text = "Tên bàn";
+            this.groupBox1.Controls.Add(this.label5);
+            this.groupBox1.Controls.Add(this.button3);
+            this.groupBox1.Controls.Add(this.button2);
+            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.lbCheckOut);
+            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(736, 198);
+            this.groupBox1.TabIndex = 2;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Khu vực";
             // 
             // label5
             // 
@@ -204,6 +163,47 @@
             this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Tên khu vực";
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(396, 118);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(70, 30);
+            this.button3.TabIndex = 4;
+            this.button3.Text = "Đổi tên";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(320, 118);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(70, 30);
+            this.button2.TabIndex = 3;
+            this.button2.Text = "Xóa";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // btnAdd
+            // 
+            this.btnAdd.Location = new System.Drawing.Point(244, 118);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(70, 30);
+            this.btnAdd.TabIndex = 2;
+            this.btnAdd.Text = "Thêm";
+            this.btnAdd.UseVisualStyleBackColor = true;
+            // 
+            // lbCheckOut
+            // 
+            this.lbCheckOut.Location = new System.Drawing.Point(469, 63);
+            this.lbCheckOut.Name = "lbCheckOut";
+            this.lbCheckOut.Size = new System.Drawing.Size(22, 22);
+            this.lbCheckOut.TabIndex = 1;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(244, 63);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(222, 22);
+            this.textBox1.TabIndex = 0;
             // 
             // SpaceSettingForm
             // 
@@ -240,6 +240,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAdd;
     }
 }

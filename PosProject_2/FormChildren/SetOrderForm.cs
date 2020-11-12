@@ -96,18 +96,16 @@ namespace PosProject_2.FormChildren
                     List<ItemPayDetail> orderedItems = ((PayAction)activateForm).OrderedItems;
                     List<HoaDonBanHang> billSales = dataContext.HoaDonBanHangs.ToList();
                     int idBill = billSales.Count + 1;
-                    string query = $"insert into dbo.HoaDonBanHang (id_hd, ngayBan, ten_nv, id_nv, TongTien) values " +
+                    string query = $"insert into dbo.HoaDonBanHang (id_hd, ngayBan, id_nv) values " +
                         $"({idBill}, " +
                         $"'{DateTime.Now.ToString()}', " +
-                        $"N'{staffs[0].ten_nhanVien}', " +
-                        $"{staffs[0].id_nhanVien}, " +
-                        $"{totalCash})";
+                        $"{staffs[0].id_nhanVien} )";
                     command = new SqlCommand(query, connection);
                     command.ExecuteNonQuery();
                     foreach (var item in orderedItems)
                     {
-                        query = $"insert into dbo.ChiTietBanHang (id_hdBan, id_sp, ten_sp, soLuong, giaBan, thanhTien) values (" +
-                            $"{idBill}, {item.ID_Product}, N'{item.Name}', {item.Amount}, {item.Price}, {item.ToCash})";
+                        query = $"insert into dbo.ChiTietBanHang (id_hdBan, id_sp, soLuong) values (" +
+                            $"{idBill}, {item.ID_Product}, {item.Amount})";
                         command = new SqlCommand(query, connection);
                         command.ExecuteNonQuery();
                     }

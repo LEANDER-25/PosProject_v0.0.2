@@ -63,9 +63,7 @@ namespace PosProject_2.FormChildren
                 ItemPayDetail itemPay = new ItemPayDetail(
                     idtentity,
                     item.id_sp,
-                    item.ten_sp,
-                    item.soLuongYeuCau.Value,
-                    item.giaBan.Value
+                    item.soLuongYeuCau.Value
                 );
                 this.OrderedItems.Add(itemPay);
             }

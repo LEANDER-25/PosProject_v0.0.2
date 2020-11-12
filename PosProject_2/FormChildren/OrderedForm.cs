@@ -392,11 +392,9 @@ namespace PosProject_2.FormChildren
         }
         void InsertInTemp_NoConn(ItemOrdered item, SqlConnection connection)
         {
-            string query = $"insert into dbo.CacBanCoDon (id_ban, id_sp, ten_sp, giaBan, soLuongYeuCau) values " +
+            string query = $"insert into dbo.CacBanCoDon (id_ban, id_sp, soLuongYeuCau) values " +
                 $"({item.IDTable}," +
                 $" {item.ID}," +
-                $" N'{item.Name}'," +
-                $" {item.Price}," +
                 $" {item.Amount})";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();

@@ -48,42 +48,63 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 listStaffs.Items.Add(item);
             }
         }
-        void ValidInputString(Control control, string pattern)
+        void ValidInputString(ref string textInput, string pattern, ref Color foreColor)
         {
-            string text = control.Text.TrimStart();
+            string text = textInput.TrimStart();
             text = text.TrimEnd();
             if (!Regex.IsMatch(text, pattern)){
-                control.ForeColor = Color.Red;
+                foreColor = Color.Red;
             }
             else
             {
-                control.ForeColor = Color.Green;
+                foreColor = Color.Green;
             }
+            textInput = text;
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
         {
-            ValidInputString(this.txtName, @"^[\p{L}\p{M}' \.\-]+$");
+            string text = this.txtName.Text;
+            Color fore = this.txtName.ForeColor;
+            ValidInputString(ref text, @"^[\p{L}\p{M}' \.\-]+$", ref fore);
+            this.txtName.Text = text;
+            this.txtName.ForeColor = fore;
         }
 
         private void txtPhone_TextChanged(object sender, EventArgs e)
         {
-            ValidInputString(this.txtPhone, @"^[\d]{10}$");
+            string text = this.txtPhone.Text;
+            Color fore = this.txtPhone.ForeColor;
+            ValidInputString(ref text, @"^[\d]{10}$", ref fore);
+            this.txtPhone.Text = text;
+            this.txtPhone.ForeColor = fore;
         }
 
         private void txtPosition_TextChanged(object sender, EventArgs e)
         {
-            ValidInputString(this.txtPosition, @"^[\p{L}\p{M}\d' \.\-]+$");
+            string text = this.txtPosition.Text;
+            Color fore = this.txtPosition.ForeColor;
+            ValidInputString(ref text, @"^[\p{L}\p{M}\d' \.\-]+$", ref fore);
+            this.txtPosition.Text = text;
+            this.txtPosition.ForeColor = fore;
         }
 
         private void txtNickName_TextChanged(object sender, EventArgs e)
         {
-            ValidInputString(this.txtNickName, @"[\w|_]+$");
+            string text = this.txtNickName.Text;
+            Color fore = this.txtNickName.ForeColor;
+            ValidInputString(ref text, @"^[A-Z_a-z0-9]+$", ref fore);
+            this.txtNickName.Text = text;
+            this.txtNickName.ForeColor = fore;
         }
 
         private void txtPwd_TextChanged(object sender, EventArgs e)
         {
-            ValidInputString(this.txtPwd, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$");
+            string text = this.txtPwd.Text;
+            Color fore = this.txtPwd.ForeColor;
+            ValidInputString(ref text, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$", ref fore);
+            this.txtPwd.Text = text;
+            this.txtPwd.ForeColor = fore;
         }
 
         private void txtPwdConfirm_TextChanged(object sender, EventArgs e)
@@ -133,6 +154,11 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 }
             }
             TextFillInError(flags, "chưa được nhập!");
+            bool fillFull = CheckFillFull(flags);
+            if (!fillFull)
+            {
+                return;
+            }
             flags.Clear();
             flags.Add(-1);
             dataContext = new DataPoSContext();
@@ -141,21 +167,14 @@ namespace PosProject_2.FormChildren.SettingChildForms
             flags.Add(CheckExist(staffNames, texts[0], 0));
             flags.Add(CheckExist(staffNames, texts[3], 3));
             TextFillInError(flags, "đã tồn tại");
-            bool fillFull = true;
-            foreach (var item in flags)
-            {
-                if(item != -1)
-                {
-                    fillFull = false;
-                    break;
-                }
-            }
+            fillFull = CheckFillFull(flags);
             if (fillFull)
             {
+                Console.WriteLine(fillFull.ToString());
                 var admin = from nv in dataContext.NhanViens
                             where nv.isOnline == true
                             select nv.chucVu;
-                if(texts[2].Equals("Quản lý") && !admin.First().Equals("admin"))
+                if (texts[2].Equals("Quản lý") && !admin.First().Equals("admin"))
                 {
                     MessageBox.Show("Bạn không có quyền cài đặt chức quản lý!\n" +
                         "Chỉ có admin mới được cài chức danh này!", "Cảnh báo", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -168,6 +187,23 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 SQLQuery.OpenCloseConn(query, connString);
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            else
+            {
+                return;
+            }
+        }
+        bool CheckFillFull(List<int> flags)
+        {
+            bool fillFull = true;
+            foreach (var item in flags)
+            {
+                if (item != -1)
+                {
+                    fillFull = false;
+                    break;
+                }
+            }
+            return fillFull;
         }
         void TextFillInError(List<int> flags, string error)
         {

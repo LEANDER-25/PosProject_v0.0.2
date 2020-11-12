@@ -56,6 +56,11 @@ namespace PosProject_2.Models
                     return;
                 }
             }
+            if (this.txtPosition.Text.Equals("admin"))
+            {
+                MessageBox.Show("Bạn không có quyền thêm nhân viên này", "Lỗi: Quyền lực được hạn chế", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                return;
+            }
             int id = Int32.Parse(this.idStaff);
             string query = $"update dbo.NhanVien " +
                 $"set " +
@@ -64,6 +69,7 @@ namespace PosProject_2.Models
                 $"chucVu = N'{this.txtPosition.Text}'," +
                 $"SDT = '{this.txtPhone.Text}' where id_nhanVien = {id}";
             SQLQuery.OpenCloseConn(query, connString);
+            MessageBox.Show("Cập nhật thành công :>", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void btnDelStaff_Click(object sender, EventArgs e)
@@ -89,6 +95,7 @@ namespace PosProject_2.Models
                 string query = $"delete from dbo.NhanVien where id_nhanVien = {id}";
                 SQLQuery.OpenCloseConn(query, connString);
                 MessageBox.Show("Xóa anh/chị đẹp trai/gái thành công :<", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                this.Close();
             }
             else
             {
