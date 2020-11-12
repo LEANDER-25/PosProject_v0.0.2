@@ -92,18 +92,6 @@
       <Association Name="NguyenLieu_ChiTietNhapHang" Member="ChiTietNhapHangs" ThisKey="id" OtherKey="id_nguyenLieu" Type="ChiTietNhapHang" />
     </Type>
   </Table>
-  <Table Name="dbo.NhanVien" Member="NhanViens">
-    <Type Name="NhanVien">
-      <Column Name="id_nhanVien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
-      <Column Name="ten_nhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="ten_dangNhap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="matKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
-      <Column Name="chucVu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
-      <Column Name="isOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
-      <Association Name="NhanVien_HoaDonBanHang" Member="HoaDonBanHangs" ThisKey="id_nhanVien" OtherKey="id_nv" Type="HoaDonBanHang" />
-      <Association Name="NhanVien_HoaDonNhapHang" Member="HoaDonNhapHangs" ThisKey="id_nhanVien" OtherKey="id_nv" Type="HoaDonNhapHang" />
-    </Type>
-  </Table>
   <Table Name="dbo.ChiTietNhapHang" Member="ChiTietNhapHangs">
     <Type Name="ChiTietNhapHang">
       <Column Name="id_hoaDonNhap" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
@@ -127,6 +115,19 @@
       <Column Name="thanhTien" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Association Name="HoaDonBanHang_ChiTietBanHang" Member="HoaDonBanHang" ThisKey="id_hdBan" OtherKey="id_hd" Type="HoaDonBanHang" IsForeignKey="true" />
       <Association Name="SanPham_ChiTietBanHang" Member="SanPham" ThisKey="id_sp" OtherKey="id_sp" Type="SanPham" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.NhanVien" Member="NhanViens">
+    <Type Name="NhanVien">
+      <Column Name="id_nhanVien" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="ten_nhanVien" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="ten_dangNhap" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="matKhau" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="chucVu" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Column Name="isOnline" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="SDT" Type="System.String" DbType="Char(11)" CanBeNull="true" />
+      <Association Name="NhanVien_HoaDonBanHang" Member="HoaDonBanHangs" ThisKey="id_nhanVien" OtherKey="id_nv" Type="HoaDonBanHang" />
+      <Association Name="NhanVien_HoaDonNhapHang" Member="HoaDonNhapHangs" ThisKey="id_nhanVien" OtherKey="id_nv" Type="HoaDonNhapHang" />
     </Type>
   </Table>
 </Database>

@@ -121,7 +121,7 @@ namespace PosProject_2
             var result = from staff in dataContext.NhanViens
                          where staff.id_nhanVien == IDStaff
                          select staff.chucVu;
-            if (result.First().Equals("Quản lý")) 
+            if (result.First().Equals("Quản lý") || result.First().Equals("admin")) 
             {
                 OpenTablesForm(new SettingForm());
                 return;

@@ -126,6 +126,13 @@
     <Compile Include="Models\SelectedItemButton.Designer.cs">
       <DependentUpon>SelectedItemButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\SQLQuery.cs" />
+    <Compile Include="Models\StaffInfoOption.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Models\StaffInfoOption.Designer.cs">
+      <DependentUpon>StaffInfoOption.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\TableButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -169,6 +176,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\SelectedItemButton.resx">
       <DependentUpon>SelectedItemButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\StaffInfoOption.resx">
+      <DependentUpon>StaffInfoOption.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\TableButton.resx">
       <DependentUpon>TableButton.cs</DependentUpon>

@@ -20,3 +20,4 @@ C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Form
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingForm.resources
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.SpaceSettingForm.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StaffSettingForm.resources
+C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Models.StaffInfoOption.resources
