@@ -54,8 +54,8 @@ namespace PosProject_2
 
         void MarkStaffState(StaffState state)
         {
-            string connString = @"Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connString);
+            SQLQuery sqlObject = new SQLQuery(); 
+            SqlConnection connection = new SqlConnection(sqlObject.ConnectionString);
             try
             {
                 int isOnline = 0;
