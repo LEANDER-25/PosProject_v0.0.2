@@ -32,19 +32,19 @@
             this.label4 = new System.Windows.Forms.Label();
             this.lbCheckOutArea = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtAreaExist = new System.Windows.Forms.TextBox();
             this.button4 = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.lbCheckOutTable = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtTable = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.btnAdd = new System.Windows.Forms.Button();
+            this.btnUpdateArea = new System.Windows.Forms.Button();
+            this.btnDelArea = new System.Windows.Forms.Button();
+            this.btnAddArea = new System.Windows.Forms.Button();
             this.lbCheckOut = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtArea = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -54,12 +54,12 @@
             this.groupBox2.Controls.Add(this.label4);
             this.groupBox2.Controls.Add(this.lbCheckOutArea);
             this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.textBox3);
+            this.groupBox2.Controls.Add(this.txtAreaExist);
             this.groupBox2.Controls.Add(this.button4);
             this.groupBox2.Controls.Add(this.button5);
             this.groupBox2.Controls.Add(this.button6);
             this.groupBox2.Controls.Add(this.lbCheckOutTable);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.txtTable);
             this.groupBox2.Location = new System.Drawing.Point(12, 216);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(736, 198);
@@ -92,12 +92,12 @@
             this.label3.TabIndex = 12;
             this.label3.Text = "Tên khu vực";
             // 
-            // textBox3
+            // txtAreaExist
             // 
-            this.textBox3.Location = new System.Drawing.Point(241, 39);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 22);
-            this.textBox3.TabIndex = 10;
+            this.txtAreaExist.Location = new System.Drawing.Point(241, 39);
+            this.txtAreaExist.Name = "txtAreaExist";
+            this.txtAreaExist.Size = new System.Drawing.Size(222, 22);
+            this.txtAreaExist.TabIndex = 10;
             // 
             // button4
             // 
@@ -133,21 +133,21 @@
             this.lbCheckOutTable.Size = new System.Drawing.Size(22, 22);
             this.lbCheckOutTable.TabIndex = 6;
             // 
-            // textBox2
+            // txtTable
             // 
-            this.textBox2.Location = new System.Drawing.Point(241, 67);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 22);
-            this.textBox2.TabIndex = 5;
+            this.txtTable.Location = new System.Drawing.Point(241, 67);
+            this.txtTable.Name = "txtTable";
+            this.txtTable.Size = new System.Drawing.Size(222, 22);
+            this.txtTable.TabIndex = 5;
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.button3);
-            this.groupBox1.Controls.Add(this.button2);
-            this.groupBox1.Controls.Add(this.btnAdd);
+            this.groupBox1.Controls.Add(this.btnUpdateArea);
+            this.groupBox1.Controls.Add(this.btnDelArea);
+            this.groupBox1.Controls.Add(this.btnAddArea);
             this.groupBox1.Controls.Add(this.lbCheckOut);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(736, 198);
@@ -164,32 +164,35 @@
             this.label5.TabIndex = 13;
             this.label5.Text = "Tên khu vực";
             // 
-            // button3
+            // btnUpdateArea
             // 
-            this.button3.Location = new System.Drawing.Point(396, 118);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(70, 30);
-            this.button3.TabIndex = 4;
-            this.button3.Text = "Đổi tên";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnUpdateArea.Location = new System.Drawing.Point(396, 118);
+            this.btnUpdateArea.Name = "btnUpdateArea";
+            this.btnUpdateArea.Size = new System.Drawing.Size(70, 30);
+            this.btnUpdateArea.TabIndex = 4;
+            this.btnUpdateArea.Text = "Đổi tên";
+            this.btnUpdateArea.UseVisualStyleBackColor = true;
+            this.btnUpdateArea.Click += new System.EventHandler(this.btnUpdateArea_Click);
             // 
-            // button2
+            // btnDelArea
             // 
-            this.button2.Location = new System.Drawing.Point(320, 118);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(70, 30);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Xóa";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnDelArea.Location = new System.Drawing.Point(320, 118);
+            this.btnDelArea.Name = "btnDelArea";
+            this.btnDelArea.Size = new System.Drawing.Size(70, 30);
+            this.btnDelArea.TabIndex = 3;
+            this.btnDelArea.Text = "Xóa";
+            this.btnDelArea.UseVisualStyleBackColor = true;
+            this.btnDelArea.Click += new System.EventHandler(this.btnDelArea_Click);
             // 
-            // btnAdd
+            // btnAddArea
             // 
-            this.btnAdd.Location = new System.Drawing.Point(244, 118);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(70, 30);
-            this.btnAdd.TabIndex = 2;
-            this.btnAdd.Text = "Thêm";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAddArea.Location = new System.Drawing.Point(244, 118);
+            this.btnAddArea.Name = "btnAddArea";
+            this.btnAddArea.Size = new System.Drawing.Size(70, 30);
+            this.btnAddArea.TabIndex = 2;
+            this.btnAddArea.Text = "Thêm";
+            this.btnAddArea.UseVisualStyleBackColor = true;
+            this.btnAddArea.Click += new System.EventHandler(this.btnAddArea_Click);
             // 
             // lbCheckOut
             // 
@@ -198,12 +201,12 @@
             this.lbCheckOut.Size = new System.Drawing.Size(22, 22);
             this.lbCheckOut.TabIndex = 1;
             // 
-            // textBox1
+            // txtArea
             // 
-            this.textBox1.Location = new System.Drawing.Point(244, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 22);
-            this.textBox1.TabIndex = 0;
+            this.txtArea.Location = new System.Drawing.Point(244, 63);
+            this.txtArea.Name = "txtArea";
+            this.txtArea.Size = new System.Drawing.Size(222, 22);
+            this.txtArea.TabIndex = 0;
             // 
             // SpaceSettingForm
             // 
@@ -227,19 +230,19 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label lbCheckOut;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lbCheckOutArea;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtAreaExist;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label lbCheckOutTable;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtTable;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnUpdateArea;
+        private System.Windows.Forms.Button btnDelArea;
+        private System.Windows.Forms.Button btnAddArea;
     }
 }

@@ -17,7 +17,6 @@ namespace PosProject_2.Models
         string positionStaff;
         string phoneContact;
         string accountName;
-        string connString = @"Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Security=True";
         public StaffInfoOption()
         {
             InitializeComponent();
@@ -68,7 +67,8 @@ namespace PosProject_2.Models
                 $"ten_dangNhap = '{this.txtAcc.Text}'," +
                 $"chucVu = N'{this.txtPosition.Text}'," +
                 $"SDT = '{this.txtPhone.Text}' where id_nhanVien = {id}";
-            SQLQuery.OpenCloseConn(query, connString);
+            SQLQuery sqlOject = new SQLQuery();
+            sqlOject.OpenCloseConn(query);
             MessageBox.Show("Cập nhật thành công :>", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -93,7 +93,8 @@ namespace PosProject_2.Models
             {
                 int id = Int32.Parse(this.idStaff);
                 string query = $"delete from dbo.NhanVien where id_nhanVien = {id}";
-                SQLQuery.OpenCloseConn(query, connString);
+                SQLQuery sqlOject = new SQLQuery();
+                sqlOject.OpenCloseConn(query);
                 MessageBox.Show("Xóa anh/chị đẹp trai/gái thành công :<", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 this.Close();
             }

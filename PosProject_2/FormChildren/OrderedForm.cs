@@ -203,8 +203,9 @@ namespace PosProject_2.FormChildren
             var tableExist = from table in dataContext.BanAns
                              where table.id == this.IDThisTable
                              select table.isOrder;
-            string connString = @"Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Security=True";
-            SqlConnection connection = new SqlConnection(connString);
+            SQLQuery sqlOject = new SQLQuery();
+            
+            SqlConnection connection = new SqlConnection(sqlOject.ConnectionString);
             try
             {
                 List<ItemOrdered> ordereds = new List<ItemOrdered>();

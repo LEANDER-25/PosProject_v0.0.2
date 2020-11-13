@@ -183,8 +183,8 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 string query = $"insert into dbo.NhanVien (ten_nhanVien, ten_dangNhap, matKhau, chucVu, SDT) values " +
                     $"(N'{texts[0]}', '{texts[3]}', '{texts[4]}', N'{texts[2]}', '{texts[1]}'" +
                     $")";
-                string connString = @"Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Security=True";
-                SQLQuery.OpenCloseConn(query, connString);
+                SQLQuery sqlOject = new SQLQuery();
+                sqlOject.OpenCloseConn(query);
                 MessageBox.Show("Thêm nhân viên thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else

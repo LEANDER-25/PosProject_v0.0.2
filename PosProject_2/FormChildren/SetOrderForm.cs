@@ -86,8 +86,8 @@ namespace PosProject_2.FormChildren
             }
             if(this.activateForm.Name.Equals("PayAction"))
             {
-                string connString = @"Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Security=True";
-                SqlConnection connection = new SqlConnection(connString);
+                SQLQuery sqlOject = new SQLQuery();
+                SqlConnection connection = new SqlConnection(sqlOject.ConnectionString);
                 try
                 {
                     connection.Open();
