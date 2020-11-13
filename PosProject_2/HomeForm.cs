@@ -26,7 +26,6 @@ namespace PosProject_2
         }
         public HomeForm(int idStaff)
         {
-            dataContext = new DataPoSContext();
             this.IDStaff = idStaff;
             InitializeComponent();
             LoadForm();
@@ -45,6 +44,7 @@ namespace PosProject_2
         }
         void LoadForm()
         {
+            dataContext = new DataPoSContext();
             List<NhanVien> staffs = dataContext.NhanViens.Where(s => s.id_nhanVien == this.IDStaff).ToList();
             this.lbStaffName.Text = staffs[0].ten_nhanVien;
             this.lbStaffPosition.Text = "Vị trí: " + staffs[0].chucVu;
@@ -90,6 +90,7 @@ namespace PosProject_2
 
         private void HomeForm_Activated(object sender, EventArgs e)
         {
+            dataContext = new DataPoSContext();
             Random rnd = new Random();
             this.flowAreas.Controls.Clear();
             List<KhuVuc> areas = dataContext.KhuVucs.ToList();

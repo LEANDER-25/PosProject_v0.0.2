@@ -51,9 +51,8 @@
             this.lbNotice.ForeColor = System.Drawing.Color.Transparent;
             this.lbNotice.Location = new System.Drawing.Point(131, 0);
             this.lbNotice.Name = "lbNotice";
-            this.lbNotice.Size = new System.Drawing.Size(19, 17);
+            this.lbNotice.Size = new System.Drawing.Size(0, 17);
             this.lbNotice.TabIndex = 1;
-            this.lbNotice.Text = "O";
             // 
             // AreaButton
             // 

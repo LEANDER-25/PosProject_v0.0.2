@@ -30,35 +30,36 @@
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.lbCheckOutArea = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txtAreaExist = new System.Windows.Forms.TextBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.lbCheckOutTable = new System.Windows.Forms.Label();
+            this.btnUpdateTableName = new System.Windows.Forms.Button();
+            this.btnDelTable = new System.Windows.Forms.Button();
+            this.btnAddTable = new System.Windows.Forms.Button();
             this.txtTable = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnUpdateArea = new System.Windows.Forms.Button();
+            this.btnUpdateAreaName = new System.Windows.Forms.Button();
             this.btnDelArea = new System.Windows.Forms.Button();
             this.btnAddArea = new System.Windows.Forms.Button();
-            this.lbCheckOut = new System.Windows.Forms.Label();
             this.txtArea = new System.Windows.Forms.TextBox();
+            this.txtNewAreaName = new System.Windows.Forms.TextBox();
+            this.chckChangeAreaName = new System.Windows.Forms.CheckBox();
+            this.chckChangeTableName = new System.Windows.Forms.CheckBox();
+            this.txtNewTableName = new System.Windows.Forms.TextBox();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.chckChangeTableName);
+            this.groupBox2.Controls.Add(this.txtNewTableName);
             this.groupBox2.Controls.Add(this.label4);
-            this.groupBox2.Controls.Add(this.lbCheckOutArea);
             this.groupBox2.Controls.Add(this.label3);
             this.groupBox2.Controls.Add(this.txtAreaExist);
-            this.groupBox2.Controls.Add(this.button4);
-            this.groupBox2.Controls.Add(this.button5);
-            this.groupBox2.Controls.Add(this.button6);
-            this.groupBox2.Controls.Add(this.lbCheckOutTable);
+            this.groupBox2.Controls.Add(this.btnUpdateTableName);
+            this.groupBox2.Controls.Add(this.btnDelTable);
+            this.groupBox2.Controls.Add(this.btnAddTable);
             this.groupBox2.Controls.Add(this.txtTable);
             this.groupBox2.Location = new System.Drawing.Point(12, 216);
             this.groupBox2.Name = "groupBox2";
@@ -70,23 +71,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(149, 67);
+            this.label4.Location = new System.Drawing.Point(149, 66);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(61, 17);
             this.label4.TabIndex = 14;
             this.label4.Text = "Tên bàn";
             // 
-            // lbCheckOutArea
-            // 
-            this.lbCheckOutArea.Location = new System.Drawing.Point(469, 39);
-            this.lbCheckOutArea.Name = "lbCheckOutArea";
-            this.lbCheckOutArea.Size = new System.Drawing.Size(22, 22);
-            this.lbCheckOutArea.TabIndex = 13;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(149, 42);
+            this.label3.Location = new System.Drawing.Point(149, 41);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(86, 17);
             this.label3.TabIndex = 12;
@@ -94,59 +88,57 @@
             // 
             // txtAreaExist
             // 
-            this.txtAreaExist.Location = new System.Drawing.Point(241, 39);
+            this.txtAreaExist.Location = new System.Drawing.Point(241, 38);
             this.txtAreaExist.Name = "txtAreaExist";
             this.txtAreaExist.Size = new System.Drawing.Size(222, 22);
             this.txtAreaExist.TabIndex = 10;
             // 
-            // button4
+            // btnUpdateTableName
             // 
-            this.button4.Location = new System.Drawing.Point(393, 122);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(70, 30);
-            this.button4.TabIndex = 9;
-            this.button4.Text = "Đổi tên";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnUpdateTableName.Location = new System.Drawing.Point(393, 122);
+            this.btnUpdateTableName.Name = "btnUpdateTableName";
+            this.btnUpdateTableName.Size = new System.Drawing.Size(70, 30);
+            this.btnUpdateTableName.TabIndex = 9;
+            this.btnUpdateTableName.Text = "Đổi tên";
+            this.btnUpdateTableName.UseVisualStyleBackColor = true;
+            this.btnUpdateTableName.Visible = false;
+            this.btnUpdateTableName.Click += new System.EventHandler(this.btnUpdateTableName_Click);
             // 
-            // button5
+            // btnDelTable
             // 
-            this.button5.Location = new System.Drawing.Point(317, 122);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(70, 30);
-            this.button5.TabIndex = 8;
-            this.button5.Text = "Xóa";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDelTable.Location = new System.Drawing.Point(317, 122);
+            this.btnDelTable.Name = "btnDelTable";
+            this.btnDelTable.Size = new System.Drawing.Size(70, 30);
+            this.btnDelTable.TabIndex = 8;
+            this.btnDelTable.Text = "Xóa";
+            this.btnDelTable.UseVisualStyleBackColor = true;
+            this.btnDelTable.Click += new System.EventHandler(this.btnDelTable_Click);
             // 
-            // button6
+            // btnAddTable
             // 
-            this.button6.Location = new System.Drawing.Point(241, 122);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(70, 30);
-            this.button6.TabIndex = 7;
-            this.button6.Text = "Thêm";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // lbCheckOutTable
-            // 
-            this.lbCheckOutTable.Location = new System.Drawing.Point(469, 67);
-            this.lbCheckOutTable.Name = "lbCheckOutTable";
-            this.lbCheckOutTable.Size = new System.Drawing.Size(22, 22);
-            this.lbCheckOutTable.TabIndex = 6;
+            this.btnAddTable.Location = new System.Drawing.Point(241, 122);
+            this.btnAddTable.Name = "btnAddTable";
+            this.btnAddTable.Size = new System.Drawing.Size(70, 30);
+            this.btnAddTable.TabIndex = 7;
+            this.btnAddTable.Text = "Thêm";
+            this.btnAddTable.UseVisualStyleBackColor = true;
+            this.btnAddTable.Click += new System.EventHandler(this.btnAddTable_Click);
             // 
             // txtTable
             // 
-            this.txtTable.Location = new System.Drawing.Point(241, 67);
+            this.txtTable.Location = new System.Drawing.Point(241, 66);
             this.txtTable.Name = "txtTable";
             this.txtTable.Size = new System.Drawing.Size(222, 22);
             this.txtTable.TabIndex = 5;
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.chckChangeAreaName);
+            this.groupBox1.Controls.Add(this.txtNewAreaName);
             this.groupBox1.Controls.Add(this.label5);
-            this.groupBox1.Controls.Add(this.btnUpdateArea);
+            this.groupBox1.Controls.Add(this.btnUpdateAreaName);
             this.groupBox1.Controls.Add(this.btnDelArea);
             this.groupBox1.Controls.Add(this.btnAddArea);
-            this.groupBox1.Controls.Add(this.lbCheckOut);
             this.groupBox1.Controls.Add(this.txtArea);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -158,21 +150,22 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 66);
+            this.label5.Location = new System.Drawing.Point(152, 64);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(86, 17);
             this.label5.TabIndex = 13;
             this.label5.Text = "Tên khu vực";
             // 
-            // btnUpdateArea
+            // btnUpdateAreaName
             // 
-            this.btnUpdateArea.Location = new System.Drawing.Point(396, 118);
-            this.btnUpdateArea.Name = "btnUpdateArea";
-            this.btnUpdateArea.Size = new System.Drawing.Size(70, 30);
-            this.btnUpdateArea.TabIndex = 4;
-            this.btnUpdateArea.Text = "Đổi tên";
-            this.btnUpdateArea.UseVisualStyleBackColor = true;
-            this.btnUpdateArea.Click += new System.EventHandler(this.btnUpdateArea_Click);
+            this.btnUpdateAreaName.Location = new System.Drawing.Point(396, 118);
+            this.btnUpdateAreaName.Name = "btnUpdateAreaName";
+            this.btnUpdateAreaName.Size = new System.Drawing.Size(70, 30);
+            this.btnUpdateAreaName.TabIndex = 4;
+            this.btnUpdateAreaName.Text = "Đổi tên";
+            this.btnUpdateAreaName.UseVisualStyleBackColor = true;
+            this.btnUpdateAreaName.Visible = false;
+            this.btnUpdateAreaName.Click += new System.EventHandler(this.btnUpdateArea_Click);
             // 
             // btnDelArea
             // 
@@ -194,19 +187,52 @@
             this.btnAddArea.UseVisualStyleBackColor = true;
             this.btnAddArea.Click += new System.EventHandler(this.btnAddArea_Click);
             // 
-            // lbCheckOut
-            // 
-            this.lbCheckOut.Location = new System.Drawing.Point(469, 63);
-            this.lbCheckOut.Name = "lbCheckOut";
-            this.lbCheckOut.Size = new System.Drawing.Size(22, 22);
-            this.lbCheckOut.TabIndex = 1;
-            // 
             // txtArea
             // 
-            this.txtArea.Location = new System.Drawing.Point(244, 63);
+            this.txtArea.Location = new System.Drawing.Point(244, 61);
             this.txtArea.Name = "txtArea";
             this.txtArea.Size = new System.Drawing.Size(222, 22);
             this.txtArea.TabIndex = 0;
+            // 
+            // txtNewAreaName
+            // 
+            this.txtNewAreaName.Location = new System.Drawing.Point(244, 90);
+            this.txtNewAreaName.Name = "txtNewAreaName";
+            this.txtNewAreaName.Size = new System.Drawing.Size(222, 22);
+            this.txtNewAreaName.TabIndex = 14;
+            this.txtNewAreaName.Text = "Nhập tên mới";
+            this.txtNewAreaName.Visible = false;
+            // 
+            // chckChangeAreaName
+            // 
+            this.chckChangeAreaName.AutoSize = true;
+            this.chckChangeAreaName.Location = new System.Drawing.Point(472, 63);
+            this.chckChangeAreaName.Name = "chckChangeAreaName";
+            this.chckChangeAreaName.Size = new System.Drawing.Size(75, 21);
+            this.chckChangeAreaName.TabIndex = 15;
+            this.chckChangeAreaName.Text = "Đổi tên";
+            this.chckChangeAreaName.UseVisualStyleBackColor = true;
+            this.chckChangeAreaName.CheckStateChanged += new System.EventHandler(this.chckChangeAreaName_CheckStateChanged);
+            // 
+            // chckChangeTableName
+            // 
+            this.chckChangeTableName.AutoSize = true;
+            this.chckChangeTableName.Location = new System.Drawing.Point(469, 68);
+            this.chckChangeTableName.Name = "chckChangeTableName";
+            this.chckChangeTableName.Size = new System.Drawing.Size(75, 21);
+            this.chckChangeTableName.TabIndex = 17;
+            this.chckChangeTableName.Text = "Đổi tên";
+            this.chckChangeTableName.UseVisualStyleBackColor = true;
+            this.chckChangeTableName.CheckStateChanged += new System.EventHandler(this.chckChangeTableName_CheckStateChanged);
+            // 
+            // txtNewTableName
+            // 
+            this.txtNewTableName.Location = new System.Drawing.Point(241, 94);
+            this.txtNewTableName.Name = "txtNewTableName";
+            this.txtNewTableName.Size = new System.Drawing.Size(222, 22);
+            this.txtNewTableName.TabIndex = 16;
+            this.txtNewTableName.Text = "Nhập tên mới";
+            this.txtNewTableName.Visible = false;
             // 
             // SpaceSettingForm
             // 
@@ -229,20 +255,21 @@
 
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lbCheckOut;
         private System.Windows.Forms.TextBox txtArea;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label lbCheckOutArea;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtAreaExist;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label lbCheckOutTable;
+        private System.Windows.Forms.Button btnUpdateTableName;
+        private System.Windows.Forms.Button btnDelTable;
+        private System.Windows.Forms.Button btnAddTable;
         private System.Windows.Forms.TextBox txtTable;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnUpdateArea;
+        private System.Windows.Forms.Button btnUpdateAreaName;
         private System.Windows.Forms.Button btnDelArea;
         private System.Windows.Forms.Button btnAddArea;
+        private System.Windows.Forms.CheckBox chckChangeAreaName;
+        private System.Windows.Forms.TextBox txtNewAreaName;
+        private System.Windows.Forms.CheckBox chckChangeTableName;
+        private System.Windows.Forms.TextBox txtNewTableName;
     }
 }
