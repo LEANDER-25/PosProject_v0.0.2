@@ -29,7 +29,7 @@ namespace PosProject_2.Models
             this.lbText.TextAlign = ContentAlignment.MiddleCenter;
             this.lbText.ForeColor = Color.White;
             this.lbText.BackColor = Color.Transparent;
-            this.BackColor = this.Table.isOrder == true ? Color.Crimson : Color.HotPink;
+            this.BackColor = this.Table.isOrder == true ? ColorTranslator.FromHtml("#A352D9") : ColorTranslator.FromHtml("#DAA2F2");
             this.Name = this.Table.id.ToString();
         }
     }

@@ -42,6 +42,7 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panelChildFormShow.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -100,12 +101,14 @@
             // 
             // panel3
             // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(149)))), ((int)(((byte)(94)))));
+            this.panel3.Controls.Add(this.dateTimePicker1);
             this.panel3.Controls.Add(this.lbStaffPosition);
             this.panel3.Controls.Add(this.lbCurrentTime);
             this.panel3.Controls.Add(this.lbStaffName);
             this.panel3.Location = new System.Drawing.Point(5, 6);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(975, 89);
+            this.panel3.Size = new System.Drawing.Size(971, 89);
             this.panel3.TabIndex = 2;
             // 
             // lbStaffPosition
@@ -120,9 +123,9 @@
             // lbCurrentTime
             // 
             this.lbCurrentTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbCurrentTime.Location = new System.Drawing.Point(788, 14);
+            this.lbCurrentTime.Location = new System.Drawing.Point(791, 0);
             this.lbCurrentTime.Name = "lbCurrentTime";
-            this.lbCurrentTime.Size = new System.Drawing.Size(174, 61);
+            this.lbCurrentTime.Size = new System.Drawing.Size(174, 42);
             this.lbCurrentTime.TabIndex = 5;
             this.lbCurrentTime.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
@@ -201,9 +204,18 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(739, 46);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 24);
+            this.dateTimePicker1.TabIndex = 7;
+            // 
             // HomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(980, 700);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelChildFormShow);
@@ -239,5 +251,6 @@
         private System.Windows.Forms.Label lbStaffName;
         private System.Windows.Forms.Button btnMinimum;
         private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

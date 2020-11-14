@@ -20,6 +20,15 @@ namespace PosProject_2
             idStaff = -1;
             InitializeComponent();
         }
+        protected override CreateParams CreateParams
+        {
+            get
+            {
+                CreateParams create = base.CreateParams;
+                create.ClassStyle = 0x00020000;
+                return create;
+            }
+        }
 
         private void btnExit_Click(object sender, EventArgs e)
         {

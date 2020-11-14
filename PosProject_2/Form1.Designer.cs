@@ -37,17 +37,18 @@
             this.txtAccName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.elipseControl1 = new PosProject_2.Models.ElipseControl();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Moccasin;
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(216)))), ((int)(((byte)(242)))));
             this.panel1.Controls.Add(this.btnExit);
             this.panel1.Location = new System.Drawing.Point(12, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(39, 429);
+            this.panel1.Size = new System.Drawing.Size(39, 219);
             this.panel1.TabIndex = 8;
             // 
             // btnExit
@@ -55,7 +56,7 @@
             this.btnExit.BackColor = System.Drawing.Color.White;
             this.btnExit.FlatAppearance.BorderColor = System.Drawing.Color.DarkRed;
             this.btnExit.FlatAppearance.BorderSize = 0;
-            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btnExit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(242)))));
             this.btnExit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnExit.Location = new System.Drawing.Point(4, 4);
             this.btnExit.Name = "btnExit";
@@ -66,23 +67,26 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Tomato;
+            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(141)))), ((int)(((byte)(242)))));
             this.panel2.Controls.Add(this.btnForgotPwd);
             this.panel2.Controls.Add(this.btnLogIn);
             this.panel2.Controls.Add(this.txtPwd);
             this.panel2.Controls.Add(this.txtAccName);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(58, 108);
+            this.panel2.Location = new System.Drawing.Point(57, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(512, 215);
+            this.panel2.Size = new System.Drawing.Size(513, 219);
             this.panel2.TabIndex = 7;
             // 
             // btnForgotPwd
             // 
-            this.btnForgotPwd.BackColor = System.Drawing.Color.SandyBrown;
+            this.btnForgotPwd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(162)))), ((int)(((byte)(242)))));
+            this.btnForgotPwd.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnForgotPwd.FlatAppearance.BorderSize = 0;
             this.btnForgotPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnForgotPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnForgotPwd.ForeColor = System.Drawing.Color.White;
             this.btnForgotPwd.Location = new System.Drawing.Point(162, 135);
             this.btnForgotPwd.Name = "btnForgotPwd";
             this.btnForgotPwd.Size = new System.Drawing.Size(102, 35);
@@ -92,9 +96,12 @@
             // 
             // btnLogIn
             // 
-            this.btnLogIn.BackColor = System.Drawing.Color.Coral;
+            this.btnLogIn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(113)))), ((int)(((byte)(109)))), ((int)(((byte)(242)))));
+            this.btnLogIn.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(216)))), ((int)(((byte)(242)))));
+            this.btnLogIn.FlatAppearance.BorderSize = 0;
             this.btnLogIn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLogIn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(187)))), ((int)(((byte)(216)))), ((int)(((byte)(242)))));
             this.btnLogIn.Location = new System.Drawing.Point(266, 135);
             this.btnLogIn.Name = "btnLogIn";
             this.btnLogIn.Size = new System.Drawing.Size(102, 35);
@@ -122,6 +129,7 @@
             // 
             // label2
             // 
+            this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(26, 86);
@@ -133,6 +141,7 @@
             // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(26, 39);
@@ -142,10 +151,16 @@
             this.label1.Text = "Tên tài khoản";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // elipseControl1
+            // 
+            this.elipseControl1.CornerRadius = 10;
+            this.elipseControl1.TargetControl = this;
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(582, 453);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(160)))), ((int)(((byte)(180)))), ((int)(((byte)(242)))));
+            this.ClientSize = new System.Drawing.Size(582, 243);
             this.ControlBox = false;
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -170,6 +185,7 @@
         private System.Windows.Forms.Button btnForgotPwd;
         private System.Windows.Forms.Button btnLogIn;
         private System.Windows.Forms.Button btnExit;
+        private Models.ElipseControl elipseControl1;
     }
 }
 

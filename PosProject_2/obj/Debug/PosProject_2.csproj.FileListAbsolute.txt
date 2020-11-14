@@ -1,7 +1,6 @@
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\bin\Debug\PosProject_2.exe.config
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\bin\Debug\PosProject_2.exe
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\bin\Debug\PosProject_2.pdb
-C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.csprojAssemblyReference.cache
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Form1.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Properties.Resources.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.csproj.GenerateResource.cache
@@ -21,3 +20,5 @@ C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.Form
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.SpaceSettingForm.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StaffSettingForm.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Models.StaffInfoOption.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.csprojAssemblyReference.cache
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageSettingForm.resources

@@ -41,7 +41,7 @@
             // TablesForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.BackColor = System.Drawing.Color.Purple;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(184)))), ((int)(((byte)(108)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(970, 430);
             this.Controls.Add(this.flowTables);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

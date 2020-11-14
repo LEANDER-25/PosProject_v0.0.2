@@ -97,6 +97,12 @@
     <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.Designer.cs">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageSettingForm.Designer.cs">
+      <DependentUpon>StorageSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChildren\SettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </Compile>
     <Compile Include="Models\AreaButton.Designer.cs">
       <DependentUpon>AreaButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ElipseControl.cs">
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Models\ItemComponent.cs" />
     <Compile Include="Models\ItemPayDetail.cs" />
@@ -164,6 +173,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StaffSettingForm.resx">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageSettingForm.resx">
+      <DependentUpon>StorageSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingForm.resx">
       <DependentUpon>SettingForm.cs</DependentUpon>

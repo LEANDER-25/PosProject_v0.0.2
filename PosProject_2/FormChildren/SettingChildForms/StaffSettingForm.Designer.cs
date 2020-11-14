@@ -38,7 +38,6 @@
             this.txtPwdConfirm = new System.Windows.Forms.TextBox();
             this.btnSignUp = new System.Windows.Forms.Button();
             this.lbCheckPwdCF = new System.Windows.Forms.Label();
-            this.lbCheckNN = new System.Windows.Forms.Label();
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.txtNickName = new System.Windows.Forms.TextBox();
             this.txtPosition = new System.Windows.Forms.TextBox();
@@ -60,8 +59,8 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
-            this.toolTipHintPwdRule = new System.Windows.Forms.ToolTip(this.components);
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.toolTipHintPwdRule = new System.Windows.Forms.ToolTip(this.components);
             this.tabControl1.SuspendLayout();
             this.tabSignUp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -75,7 +74,7 @@
             this.tabControl1.Location = new System.Drawing.Point(13, 13);
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(735, 401);
+            this.tabControl1.Size = new System.Drawing.Size(783, 401);
             this.tabControl1.TabIndex = 0;
             // 
             // tabSignUp
@@ -90,7 +89,7 @@
             this.tabSignUp.Location = new System.Drawing.Point(4, 25);
             this.tabSignUp.Name = "tabSignUp";
             this.tabSignUp.Padding = new System.Windows.Forms.Padding(3);
-            this.tabSignUp.Size = new System.Drawing.Size(727, 372);
+            this.tabSignUp.Size = new System.Drawing.Size(775, 372);
             this.tabSignUp.TabIndex = 0;
             this.tabSignUp.Text = "Đăng ký thông tin";
             this.tabSignUp.UseVisualStyleBackColor = true;
@@ -103,20 +102,20 @@
             this.panel1.Controls.Add(this.txtPwdConfirm);
             this.panel1.Controls.Add(this.btnSignUp);
             this.panel1.Controls.Add(this.lbCheckPwdCF);
-            this.panel1.Controls.Add(this.lbCheckNN);
             this.panel1.Controls.Add(this.txtPwd);
             this.panel1.Controls.Add(this.txtNickName);
             this.panel1.Controls.Add(this.txtPosition);
             this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.txtName);
-            this.panel1.Location = new System.Drawing.Point(288, 6);
+            this.panel1.Location = new System.Drawing.Point(322, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(407, 360);
+            this.panel1.Size = new System.Drawing.Size(372, 366);
             this.panel1.TabIndex = 7;
             // 
             // btnShowPwd
             // 
             this.btnShowPwd.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnShowPwd.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnShowPwd.ForeColor = System.Drawing.Color.White;
             this.btnShowPwd.Location = new System.Drawing.Point(240, 199);
             this.btnShowPwd.Name = "btnShowPwd";
@@ -128,7 +127,7 @@
             // 
             // label6
             // 
-            this.label6.BackColor = System.Drawing.Color.DeepSkyBlue;
+            this.label6.BackColor = System.Drawing.Color.Black;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Yellow;
             this.label6.Location = new System.Drawing.Point(204, 199);
@@ -170,14 +169,6 @@
             this.lbCheckPwdCF.Name = "lbCheckPwdCF";
             this.lbCheckPwdCF.Size = new System.Drawing.Size(30, 22);
             this.lbCheckPwdCF.TabIndex = 15;
-            // 
-            // lbCheckNN
-            // 
-            this.lbCheckNN.BackColor = System.Drawing.Color.Turquoise;
-            this.lbCheckNN.Location = new System.Drawing.Point(204, 171);
-            this.lbCheckNN.Name = "lbCheckNN";
-            this.lbCheckNN.Size = new System.Drawing.Size(30, 22);
-            this.lbCheckNN.TabIndex = 13;
             // 
             // txtPwd
             // 
@@ -223,16 +214,17 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(152, 151);
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(186, 149);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(59, 17);
+            this.label9.Size = new System.Drawing.Size(66, 17);
             this.label9.TabIndex = 13;
             this.label9.Text = "Chức vụ";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(152, 123);
+            this.label5.Location = new System.Drawing.Point(186, 120);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(91, 17);
             this.label5.TabIndex = 12;
@@ -241,7 +233,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(152, 235);
+            this.label4.Location = new System.Drawing.Point(186, 233);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(130, 17);
             this.label4.TabIndex = 11;
@@ -250,16 +242,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(152, 207);
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(186, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 17);
+            this.label3.Size = new System.Drawing.Size(74, 17);
             this.label3.TabIndex = 10;
             this.label3.Text = "Mật khẩu";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(152, 179);
+            this.label2.Location = new System.Drawing.Point(186, 177);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(105, 17);
             this.label2.TabIndex = 9;
@@ -268,9 +261,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(152, 96);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(186, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(61, 17);
+            this.label1.Size = new System.Drawing.Size(69, 17);
             this.label1.TabIndex = 8;
             this.label1.Text = "Tên thật";
             // 
@@ -283,7 +277,7 @@
             this.tabInfo.Controls.Add(this.listStaffs);
             this.tabInfo.Location = new System.Drawing.Point(4, 25);
             this.tabInfo.Name = "tabInfo";
-            this.tabInfo.Size = new System.Drawing.Size(727, 372);
+            this.tabInfo.Size = new System.Drawing.Size(775, 372);
             this.tabInfo.TabIndex = 2;
             this.tabInfo.Text = "Thông tin nhân viên";
             this.tabInfo.UseVisualStyleBackColor = true;
@@ -291,7 +285,7 @@
             // rdioNameOptional
             // 
             this.rdioNameOptional.AutoSize = true;
-            this.rdioNameOptional.Location = new System.Drawing.Point(357, 338);
+            this.rdioNameOptional.Location = new System.Drawing.Point(389, 339);
             this.rdioNameOptional.Name = "rdioNameOptional";
             this.rdioNameOptional.Size = new System.Drawing.Size(113, 21);
             this.rdioNameOptional.TabIndex = 2;
@@ -303,7 +297,7 @@
             // rdioIDOptional
             // 
             this.rdioIDOptional.AutoSize = true;
-            this.rdioIDOptional.Location = new System.Drawing.Point(250, 338);
+            this.rdioIDOptional.Location = new System.Drawing.Point(282, 339);
             this.rdioIDOptional.Name = "rdioIDOptional";
             this.rdioIDOptional.Size = new System.Drawing.Size(101, 21);
             this.rdioIDOptional.TabIndex = 28;
@@ -316,7 +310,7 @@
             // 
             this.btnSearchInfo.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnSearchInfo.BackgroundImage")));
             this.btnSearchInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSearchInfo.Location = new System.Drawing.Point(450, 310);
+            this.btnSearchInfo.Location = new System.Drawing.Point(482, 311);
             this.btnSearchInfo.Name = "btnSearchInfo";
             this.btnSearchInfo.Size = new System.Drawing.Size(48, 22);
             this.btnSearchInfo.TabIndex = 1;
@@ -327,7 +321,7 @@
             // 
             this.txtSearchInfo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.Suggest;
             this.txtSearchInfo.AutoCompleteSource = System.Windows.Forms.AutoCompleteSource.CustomSource;
-            this.txtSearchInfo.Location = new System.Drawing.Point(250, 310);
+            this.txtSearchInfo.Location = new System.Drawing.Point(282, 311);
             this.txtSearchInfo.Name = "txtSearchInfo";
             this.txtSearchInfo.Size = new System.Drawing.Size(194, 22);
             this.txtSearchInfo.TabIndex = 0;
@@ -345,9 +339,9 @@
             this.listStaffs.FullRowSelect = true;
             this.listStaffs.GridLines = true;
             this.listStaffs.HideSelection = false;
-            this.listStaffs.Location = new System.Drawing.Point(31, 4);
+            this.listStaffs.Location = new System.Drawing.Point(50, 3);
             this.listStaffs.Name = "listStaffs";
-            this.listStaffs.Size = new System.Drawing.Size(669, 291);
+            this.listStaffs.Size = new System.Drawing.Size(673, 291);
             this.listStaffs.TabIndex = 3;
             this.listStaffs.UseCompatibleStateImageBehavior = false;
             this.listStaffs.View = System.Windows.Forms.View.Details;
@@ -371,21 +365,21 @@
             // columnHeader4
             // 
             this.columnHeader4.Text = "Chức vụ";
-            this.columnHeader4.Width = 135;
+            this.columnHeader4.Width = 166;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Text = "Tên đăng nhập";
+            this.columnHeader5.Width = 149;
             // 
             // toolTipHintPwdRule
             // 
             this.toolTipHintPwdRule.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Text = "Tên đăng nhập";
-            this.columnHeader5.Width = 183;
-            // 
             // StaffSettingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
-            this.ClientSize = new System.Drawing.Size(760, 426);
+            this.ClientSize = new System.Drawing.Size(808, 426);
             this.Controls.Add(this.tabControl1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffSettingForm";
@@ -409,7 +403,6 @@
         private System.Windows.Forms.TextBox txtPwdConfirm;
         private System.Windows.Forms.Button btnSignUp;
         private System.Windows.Forms.Label lbCheckPwdCF;
-        private System.Windows.Forms.Label lbCheckNN;
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.TextBox txtNickName;
         private System.Windows.Forms.TextBox txtPosition;

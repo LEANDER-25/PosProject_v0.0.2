@@ -44,7 +44,7 @@
             this.panel1.Controls.Add(this.btnSpaceSetting);
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 426);
+            this.panel1.Size = new System.Drawing.Size(150, 426);
             this.panel1.TabIndex = 0;
             // 
             // btnStorageSetting
@@ -55,10 +55,11 @@
             this.btnStorageSetting.ForeColor = System.Drawing.Color.White;
             this.btnStorageSetting.Location = new System.Drawing.Point(3, 126);
             this.btnStorageSetting.Name = "btnStorageSetting";
-            this.btnStorageSetting.Size = new System.Drawing.Size(194, 52);
+            this.btnStorageSetting.Size = new System.Drawing.Size(144, 52);
             this.btnStorageSetting.TabIndex = 2;
             this.btnStorageSetting.Text = "Kho, nguyên liệu";
             this.btnStorageSetting.UseVisualStyleBackColor = true;
+            this.btnStorageSetting.Click += new System.EventHandler(this.btnStorageSetting_Click);
             // 
             // btnStaffSetting
             // 
@@ -68,7 +69,7 @@
             this.btnStaffSetting.ForeColor = System.Drawing.Color.White;
             this.btnStaffSetting.Location = new System.Drawing.Point(3, 68);
             this.btnStaffSetting.Name = "btnStaffSetting";
-            this.btnStaffSetting.Size = new System.Drawing.Size(194, 52);
+            this.btnStaffSetting.Size = new System.Drawing.Size(144, 52);
             this.btnStaffSetting.TabIndex = 1;
             this.btnStaffSetting.Text = "Nhân viên";
             this.btnStaffSetting.UseVisualStyleBackColor = true;
@@ -82,7 +83,7 @@
             this.btnSpaceSetting.ForeColor = System.Drawing.Color.White;
             this.btnSpaceSetting.Location = new System.Drawing.Point(3, 10);
             this.btnSpaceSetting.Name = "btnSpaceSetting";
-            this.btnSpaceSetting.Size = new System.Drawing.Size(194, 52);
+            this.btnSpaceSetting.Size = new System.Drawing.Size(144, 52);
             this.btnSpaceSetting.TabIndex = 0;
             this.btnSpaceSetting.Text = "Không gian";
             this.btnSpaceSetting.UseVisualStyleBackColor = true;
@@ -90,9 +91,9 @@
             // 
             // panelChildForm
             // 
-            this.panelChildForm.Location = new System.Drawing.Point(207, 2);
+            this.panelChildForm.Location = new System.Drawing.Point(159, 2);
             this.panelChildForm.Name = "panelChildForm";
-            this.panelChildForm.Size = new System.Drawing.Size(760, 426);
+            this.panelChildForm.Size = new System.Drawing.Size(808, 426);
             this.panelChildForm.TabIndex = 1;
             // 
             // SettingForm

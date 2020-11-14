@@ -48,6 +48,12 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 listStaffs.Items.Add(item);
             }
         }
+        string TrimInput(string text)
+        {
+            string result = text.TrimStart();
+            result = text.TrimEnd();
+            return result;
+        }
         void ValidInputString(ref string textInput, string pattern, ref Color foreColor)
         {
             string text = textInput.TrimStart();
@@ -59,7 +65,6 @@ namespace PosProject_2.FormChildren.SettingChildForms
             {
                 foreColor = Color.Green;
             }
-            textInput = text;
         }
 
         private void txtName_TextChanged(object sender, EventArgs e)
@@ -67,7 +72,6 @@ namespace PosProject_2.FormChildren.SettingChildForms
             string text = this.txtName.Text;
             Color fore = this.txtName.ForeColor;
             ValidInputString(ref text, @"^[\p{L}\p{M}' \.\-]+$", ref fore);
-            this.txtName.Text = text;
             this.txtName.ForeColor = fore;
         }
 
@@ -76,7 +80,6 @@ namespace PosProject_2.FormChildren.SettingChildForms
             string text = this.txtPhone.Text;
             Color fore = this.txtPhone.ForeColor;
             ValidInputString(ref text, @"^[\d]{10}$", ref fore);
-            this.txtPhone.Text = text;
             this.txtPhone.ForeColor = fore;
         }
 
@@ -84,8 +87,7 @@ namespace PosProject_2.FormChildren.SettingChildForms
         {
             string text = this.txtPosition.Text;
             Color fore = this.txtPosition.ForeColor;
-            ValidInputString(ref text, @"^[\p{L}\p{M}\d' \.\-]+$", ref fore);
-            this.txtPosition.Text = text;
+            ValidInputString(ref text, @"^[\p{L}\p{M}|0-9|' \.\-]+$", ref fore);
             this.txtPosition.ForeColor = fore;
         }
 
@@ -94,7 +96,6 @@ namespace PosProject_2.FormChildren.SettingChildForms
             string text = this.txtNickName.Text;
             Color fore = this.txtNickName.ForeColor;
             ValidInputString(ref text, @"^[A-Z_a-z0-9]+$", ref fore);
-            this.txtNickName.Text = text;
             this.txtNickName.ForeColor = fore;
         }
 
@@ -103,7 +104,6 @@ namespace PosProject_2.FormChildren.SettingChildForms
             string text = this.txtPwd.Text;
             Color fore = this.txtPwd.ForeColor;
             ValidInputString(ref text, @"^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{3,}$", ref fore);
-            this.txtPwd.Text = text;
             this.txtPwd.ForeColor = fore;
         }
 
@@ -115,7 +115,7 @@ namespace PosProject_2.FormChildren.SettingChildForms
             }
             else
             {
-                this.lbCheckPwdCF.BackColor = Color.Crimson;
+                this.lbCheckPwdCF.BackColor = Color.Red;
             }
         }
 
@@ -131,12 +131,12 @@ namespace PosProject_2.FormChildren.SettingChildForms
         List<string> CloneTexts()
         {
             List<string> clones = new List<string>();
-            clones.Add(this.txtName.Text);
-            clones.Add(this.txtPhone.Text);
-            clones.Add(this.txtPosition.Text);
-            clones.Add(this.txtNickName.Text);
-            clones.Add(this.txtPwd.Text);
-            clones.Add(this.txtPwdConfirm.Text);
+            clones.Add(TrimInput(this.txtName.Text));
+            clones.Add(TrimInput(this.txtPhone.Text));
+            clones.Add(TrimInput(this.txtPosition.Text));
+            clones.Add(TrimInput(this.txtNickName.Text));
+            clones.Add(TrimInput(this.txtPwd.Text));
+            clones.Add(TrimInput(this.txtPwdConfirm.Text));
             return clones;
         }
 
@@ -160,12 +160,20 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 return;
             }
             flags.Clear();
+            if(this.txtPwd.ForeColor == Color.Red || this.lbCheckPwdCF.BackColor == Color.Red)
+            {
+                flags.Add(4);
+                flags.Add(5);
+                TextFillInError(flags, "không giống nhau!");
+                flags.Clear();
+                return;
+            }
             flags.Add(-1);
             dataContext = new DataPoSContext();
             List<string> staffNames = dataContext.NhanViens.Select(s => s.ten_nhanVien).ToList();
             List<string> staffAccs = dataContext.NhanViens.Select(s => s.ten_dangNhap).ToList();
             flags.Add(CheckExist(staffNames, texts[0], 0));
-            flags.Add(CheckExist(staffNames, texts[3], 3));
+            flags.Add(CheckExist(staffAccs, texts[3], 3));
             TextFillInError(flags, "đã tồn tại");
             fillFull = CheckFillFull(flags);
             if (fillFull)

@@ -47,5 +47,10 @@ namespace PosProject_2.FormChildren
         {
             OpenSettingChildForm(new StaffSettingForm());
         }
+
+        private void btnStorageSetting_Click(object sender, EventArgs e)
+        {
+            OpenSettingChildForm(new StorageSettingForm());
+        }
     }
 }

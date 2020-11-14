@@ -44,16 +44,21 @@ namespace PosProject_2.Models
         {
             bool[] isChange = { true, true, true, true};
             if (this.nameStaff.Equals(this.txtName.Text)) isChange[0] = false;
-            if (this.positionStaff.Equals(this.txtPosition.Text)) isChange[0] = false;
-            if (this.phoneContact.Equals(this.txtPhone.Text)) isChange[0] = false;
-            if (this.accountName.Equals(this.txtAcc.Text)) isChange[0] = false;
+            if (this.positionStaff.Equals(this.txtPosition.Text)) isChange[1] = false;
+            if (this.phoneContact.Equals(this.txtPhone.Text)) isChange[2] = false;
+            if (this.accountName.Equals(this.txtAcc.Text)) isChange[3] = false;
+            bool flag = false;
             foreach (var item in isChange)
             {
-                if (!item)
+                if (item)
                 {
-                    MessageBox.Show("Không có thông tin nào được thay đổi!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
+                    flag = true;
                 }
+            }
+            if (!flag)
+            {
+                MessageBox.Show("Không có thông tin nào được thay đổi!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
             if (this.txtPosition.Text.Equals("admin"))
             {
@@ -70,6 +75,7 @@ namespace PosProject_2.Models
             SQLQuery sqlOject = new SQLQuery();
             sqlOject.OpenCloseConn(query);
             MessageBox.Show("Cập nhật thành công :>", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            this.Close();
         }
 
         private void btnDelStaff_Click(object sender, EventArgs e)

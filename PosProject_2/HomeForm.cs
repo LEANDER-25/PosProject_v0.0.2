@@ -20,6 +20,7 @@ namespace PosProject_2
         DataPoSContext dataContext;
         public Form activeForm;
         System.Threading.Thread thread;
+        Stack<Form> stackForms;
         public HomeForm()
         {
             InitializeComponent();
@@ -27,6 +28,7 @@ namespace PosProject_2
         public HomeForm(int idStaff)
         {
             this.IDStaff = idStaff;
+            stackForms = new Stack<Form>();
             InitializeComponent();
             LoadForm();
         }
@@ -105,7 +107,7 @@ namespace PosProject_2
                 areaButton.Click += AreaButton_Click;
                 this.flowAreas.Controls.Add(areaButton);
             }
-            if(this.flowAreas.Controls.Count > 0)
+            if(this.flowAreas.Controls.Count > 0 && stackForms.Count == 0)
             {
                 AreaButton_Click(this.flowAreas.Controls[0], new EventArgs());
             }
@@ -114,7 +116,9 @@ namespace PosProject_2
         private void AreaButton_Click(object sender, EventArgs e)
         {
             AreaButton btn = sender as AreaButton;
-            OpenTablesForm(new TablesForm(Int32.Parse(btn.Name)));
+            TablesForm tablesForm = new TablesForm(Int32.Parse(btn.Name));
+            stackForms.Push(tablesForm);
+            OpenTablesForm(tablesForm);
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -124,7 +128,9 @@ namespace PosProject_2
                          select staff.chucVu;
             if (result.First().Equals("Quản lý") || result.First().Equals("admin")) 
             {
-                OpenTablesForm(new SettingForm());
+                SettingForm settingForm = new SettingForm();
+                stackForms.Push(settingForm);
+                OpenTablesForm(settingForm);
                 return;
             }
             else
