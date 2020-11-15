@@ -98,7 +98,7 @@ namespace PosProject_2.Models
             if(warningBox == DialogResult.OK)
             {
                 int id = Int32.Parse(this.idStaff);
-                string query = $"delete from dbo.NhanVien where id_nhanVien = {id}";
+                string query = $"update dbo.NhanVien set stillWorking = 0 where id_nhanVien = {id}";
                 SQLQuery sqlOject = new SQLQuery();
                 sqlOject.OpenCloseConn(query);
                 MessageBox.Show("Xóa anh/chị đẹp trai/gái thành công :<", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);

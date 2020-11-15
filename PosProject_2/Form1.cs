@@ -62,5 +62,21 @@ namespace PosProject_2
             thread.SetApartmentState(ApartmentState.STA);
             thread.Start();
         }
+
+        private void txtAccName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(e.KeyCode == Keys.Enter)
+            {
+                this.txtPwd.Focus();
+            }
+        }
+
+        private void txtPwd_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogIn_Click(this, new EventArgs());
+            }
+        }
     }
 }

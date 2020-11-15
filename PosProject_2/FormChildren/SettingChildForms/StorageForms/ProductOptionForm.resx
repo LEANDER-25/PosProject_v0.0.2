@@ -117,16 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <metadata name="toolTipHintPwdRule.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnSearchInfo.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACwAAAASCAIAAACvlquLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAS
-        dAAAEnQB3mYfeAAAAHVJREFUSEvtkkEKgDAMBP1Nn9mn64IYylLTbKhowWFO2xzm0G2v5XWXjiDoVTQV
-        0YVuFPUIw1lExQgjuMdMRdB46jyN/CMuV/wT0HAWUT0COtBlzFQEJNqlPYuZjehq0D5yagQ0aHedHQEN
-        2u99IAJ+IkKylgOdIHzkDVPIBAAAAABJRU5ErkJggg==
-</value>
-  </data>
 </root>

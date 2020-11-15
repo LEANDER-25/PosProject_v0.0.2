@@ -22,3 +22,7 @@ C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Form
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.Models.StaffInfoOption.resources
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.csprojAssemblyReference.cache
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageSettingForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.MenuSettingForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.Models.MaterialCard.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.ProductAddForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.ProductOptionForm.resources

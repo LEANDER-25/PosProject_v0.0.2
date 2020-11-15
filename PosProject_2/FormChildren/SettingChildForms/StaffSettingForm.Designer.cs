@@ -61,6 +61,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.toolTipHintPwdRule = new System.Windows.Forms.ToolTip(this.components);
+            this.btnRefresh = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabSignUp.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -270,6 +271,7 @@
             // 
             // tabInfo
             // 
+            this.tabInfo.Controls.Add(this.btnRefresh);
             this.tabInfo.Controls.Add(this.rdioNameOptional);
             this.tabInfo.Controls.Add(this.rdioIDOptional);
             this.tabInfo.Controls.Add(this.btnSearchInfo);
@@ -376,6 +378,17 @@
             // 
             this.toolTipHintPwdRule.ToolTipIcon = System.Windows.Forms.ToolTipIcon.Info;
             // 
+            // btnRefresh
+            // 
+            this.btnRefresh.BackColor = System.Drawing.Color.GreenYellow;
+            this.btnRefresh.Location = new System.Drawing.Point(50, 336);
+            this.btnRefresh.Name = "btnRefresh";
+            this.btnRefresh.Size = new System.Drawing.Size(75, 27);
+            this.btnRefresh.TabIndex = 29;
+            this.btnRefresh.Text = "Làm mới";
+            this.btnRefresh.UseVisualStyleBackColor = false;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
             // StaffSettingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -384,6 +397,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "StaffSettingForm";
             this.Text = "StaffSettingForm";
+            this.Activated += new System.EventHandler(this.StaffSettingForm_Activated);
             this.tabControl1.ResumeLayout(false);
             this.tabSignUp.ResumeLayout(false);
             this.tabSignUp.PerformLayout();
@@ -428,5 +442,6 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ToolTip toolTipHintPwdRule;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.Button btnRefresh;
     }
 }

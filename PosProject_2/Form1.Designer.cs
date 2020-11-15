@@ -118,6 +118,7 @@
             this.txtPwd.Size = new System.Drawing.Size(206, 27);
             this.txtPwd.TabIndex = 1;
             this.txtPwd.UseSystemPasswordChar = true;
+            this.txtPwd.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPwd_KeyDown);
             // 
             // txtAccName
             // 
@@ -126,6 +127,7 @@
             this.txtAccName.Name = "txtAccName";
             this.txtAccName.Size = new System.Drawing.Size(206, 27);
             this.txtAccName.TabIndex = 0;
+            this.txtAccName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAccName_KeyDown);
             // 
             // label2
             // 

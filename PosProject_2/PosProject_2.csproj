@@ -97,6 +97,24 @@
     <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.Designer.cs">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\MenuSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\MenuSettingForm.Designer.cs">
+      <DependentUpon>MenuSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ProductAddForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ProductAddForm.Designer.cs">
+      <DependentUpon>ProductAddForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ProductOptionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ProductOptionForm.Designer.cs">
+      <DependentUpon>ProductOptionForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChildren\SettingChildForms\StorageSettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +150,13 @@
     </Compile>
     <Compile Include="Models\ItemComponent.cs" />
     <Compile Include="Models\ItemPayDetail.cs" />
+    <Compile Include="Models\MaterialCard.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\MaterialCard.Designer.cs">
+      <DependentUpon>MaterialCard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ProductOption.cs" />
     <Compile Include="Models\SelectedItemButton.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -174,6 +199,15 @@
     <EmbeddedResource Include="FormChildren\SettingChildForms\StaffSettingForm.resx">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\MenuSettingForm.resx">
+      <DependentUpon>MenuSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\ProductAddForm.resx">
+      <DependentUpon>ProductAddForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\ProductOptionForm.resx">
+      <DependentUpon>ProductOptionForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StorageSettingForm.resx">
       <DependentUpon>StorageSettingForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -188,6 +222,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\AreaButton.resx">
       <DependentUpon>AreaButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\MaterialCard.resx">
+      <DependentUpon>MaterialCard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\SelectedItemButton.resx">
       <DependentUpon>SelectedItemButton.cs</DependentUpon>

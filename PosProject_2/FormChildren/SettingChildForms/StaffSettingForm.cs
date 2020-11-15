@@ -40,7 +40,7 @@ namespace PosProject_2.FormChildren.SettingChildForms
             List<NhanVien> staffs = dataContext.NhanViens.ToList();
             foreach (var staff in staffs)
             {
-                if (staff.chucVu.Equals("admin"))
+                if (staff.chucVu.Equals("admin") || staff.stillWorking == false)
                 {
                     continue;
                 }
@@ -304,6 +304,16 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 StaffInfoOption option = new StaffInfoOption(idStaff, nameStaff, positionStaff, phoneContact, accountName);
                 option.ShowDialog();
             }
+        }
+
+        private void StaffSettingForm_Activated(object sender, EventArgs e)
+        {
+            LoadData();
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            StaffSettingForm_Activated(this, new EventArgs());
         }
     }
 }

@@ -26,8 +26,8 @@ namespace PosProject_2.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=LAPTOP-VGNL1UAA;Initial Catalog=Project_1_Pos_FakeData;Integrated Sec" +
-            "urity=True")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local);Initial Catalog=Project_1_Pos_FakeData;Integrated Security=Tr" +
+            "ue")]
         public string Project_1_Pos_FakeDataConnectionString {
             get {
                 return ((string)(this["Project_1_Pos_FakeDataConnectionString"]));

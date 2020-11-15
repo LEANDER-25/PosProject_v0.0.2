@@ -210,7 +210,7 @@ namespace PosProject_2.FormChildren
             {
                 List<ItemOrdered> ordereds = new List<ItemOrdered>();
                 CloneOrderedItems(ref ordereds);
-                Dictionary<int, int> usedMaterials = new Dictionary<int, int>();
+                List<CustomDic> usedMaterials = new List<CustomDic>();
                 connection.Open();
                 if (Boolean.Parse(tableExist.First().Value.ToString()))
                 {
@@ -306,7 +306,7 @@ namespace PosProject_2.FormChildren
                         }
                         else if (flag == 0)
                         {
-                            usedMaterials = new Dictionary<int, int>();
+                            usedMaterials = new List<CustomDic>();
                             for (int i = savedItems.Count; i < ordereds.Count; i++)
                             {
                                 InsertInTemp_NoConn(ordereds[i], connection);
@@ -314,7 +314,7 @@ namespace PosProject_2.FormChildren
                             }
                             foreach (var item in usedMaterials)
                             {
-                                UpdateMaterialTable(item.Key, item.Value, connection);
+                                UpdateMaterialTable(item.key, item.value, connection);
                             }
                         }
                         else
@@ -331,7 +331,7 @@ namespace PosProject_2.FormChildren
                             {
                                 UpdateMaterialTable(item.Key, item.Value, connection);
                             }
-                            usedMaterials = new Dictionary<int, int>();
+                            usedMaterials = new List<CustomDic>();
                             for (int i = savedItems.Count - 1; i < ordereds.Count; i++)
                             {
                                 InsertInTemp_NoConn(ordereds[i], connection);
@@ -339,7 +339,7 @@ namespace PosProject_2.FormChildren
                             }
                             foreach (var item in usedMaterials)
                             {
-                                UpdateMaterialTable(item.Key, item.Value, connection);
+                                UpdateMaterialTable(item.key, item.value, connection);
                             }
                         }
                     }
@@ -358,7 +358,7 @@ namespace PosProject_2.FormChildren
                     }
                     foreach (var item in usedMaterials)
                     {
-                        UpdateMaterialTable(item.Key, item.Value, connection);
+                        UpdateMaterialTable(item.key, item.value, connection);
                     }
                 }
                 connection.Close();
@@ -366,7 +366,7 @@ namespace PosProject_2.FormChildren
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Có lỗi xuất hiện " + ex.Message, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show("Có lỗi xuất hiện " + ex.Message + " " + ex.InnerException, "Lỗi", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
         }
@@ -406,7 +406,7 @@ namespace PosProject_2.FormChildren
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
         }
-        void CalUsedMaterialAmount(int idProduct, int amount, ref Dictionary<int, int> usedMaterials)
+        void CalUsedMaterialAmount(int idProduct, int amount, ref List<CustomDic> usedMaterials)
         {
             List<NguyenLieu> materials = dataContext.NguyenLieus.ToList();
             List<Lam> makes = dataContext.Lams.ToList();
@@ -425,12 +425,12 @@ namespace PosProject_2.FormChildren
                 {
                     if (makeItem.Key == materialItem.id)
                     {
-                        usedMaterials.Add(materialItem.id, makeItem.Value);
+                        usedMaterials.Add(new CustomDic(materialItem.id, makeItem.Value));
                     }
                 }
             }
         }
-        void CalUsedMaterialAmountInList(List<ItemOrdered> ordereds, ref Dictionary<int, int> usedMaterials)
+        void CalUsedMaterialAmountInList(List<ItemOrdered> ordereds, ref List<CustomDic> usedMaterials)
         {
             foreach (var orderedItem in ordereds)
             {
@@ -442,6 +442,20 @@ namespace PosProject_2.FormChildren
             string query = $"update dbo.NguyenLieu set soLuongConLai = soLuongConLai - {usedAmount} where id = {idMaterial}";
             SqlCommand command = new SqlCommand(query, connection);
             command.ExecuteNonQuery();
+        }
+        class CustomDic
+        {
+            public int key;
+            public int value;
+            public CustomDic()
+            {
+
+            }
+            public CustomDic(int key, int val)
+            {
+                this.key = key;
+                this.value = val;
+            }
         }
     }
 }

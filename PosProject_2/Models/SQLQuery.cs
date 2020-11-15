@@ -9,7 +9,7 @@ namespace PosProject_2.Models
 {
     public class SQLQuery
     {
-        public string ServerName { get { return "LAPTOP-VGNL1UAA"; } set { this.ServerName = value; } }
+        public string ServerName { get { return "(local)"; } set { this.ServerName = value; } }
         public string DatabaseName { get { return "Project_1_Pos_FakeData"; } set { this.DatabaseName = value; } }
         public string ConnectionString
         {
