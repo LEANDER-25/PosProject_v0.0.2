@@ -63,7 +63,6 @@
             this.cbbTypeProd.Name = "cbbTypeProd";
             this.cbbTypeProd.Size = new System.Drawing.Size(150, 24);
             this.cbbTypeProd.TabIndex = 3;
-            this.cbbTypeProd.TextChanged += new System.EventHandler(this.cbbTypeProd_TextChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -82,6 +81,7 @@
             // 
             // txtPriceProd
             // 
+            this.txtPriceProd.ForeColor = System.Drawing.Color.Black;
             this.txtPriceProd.Location = new System.Drawing.Point(8, 35);
             this.txtPriceProd.Name = "txtPriceProd";
             this.txtPriceProd.Size = new System.Drawing.Size(150, 22);
@@ -90,10 +90,12 @@
             // 
             // txtUnitProd
             // 
+            this.txtUnitProd.ForeColor = System.Drawing.Color.Black;
             this.txtUnitProd.Location = new System.Drawing.Point(8, 63);
             this.txtUnitProd.Name = "txtUnitProd";
             this.txtUnitProd.Size = new System.Drawing.Size(150, 22);
             this.txtUnitProd.TabIndex = 2;
+            this.txtUnitProd.TextChanged += new System.EventHandler(this.txtUnitProd_TextChanged);
             // 
             // btnAddProd
             // 
@@ -103,6 +105,7 @@
             this.btnAddProd.TabIndex = 20;
             this.btnAddProd.Text = "Thêm";
             this.btnAddProd.UseVisualStyleBackColor = true;
+            this.btnAddProd.Click += new System.EventHandler(this.btnAddProd_Click);
             // 
             // label4
             // 
@@ -156,6 +159,7 @@
             this.Name = "ProductAddForm";
             this.ShowIcon = false;
             this.Text = "ProductAddForm";
+            this.Load += new System.EventHandler(this.ProductOptionForm_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

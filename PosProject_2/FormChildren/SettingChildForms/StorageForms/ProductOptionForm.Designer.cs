@@ -64,7 +64,6 @@
             this.cbbTypeProd.Name = "cbbTypeProd";
             this.cbbTypeProd.Size = new System.Drawing.Size(150, 24);
             this.cbbTypeProd.TabIndex = 3;
-            this.cbbTypeProd.TextChanged += new System.EventHandler(this.cbbTypeProd_TextChanged);
             // 
             // flowLayoutPanel1
             // 
@@ -95,6 +94,7 @@
             this.txtUnitProd.Name = "txtUnitProd";
             this.txtUnitProd.Size = new System.Drawing.Size(150, 22);
             this.txtUnitProd.TabIndex = 2;
+            this.txtUnitProd.TextChanged += new System.EventHandler(this.txtUnitProd_TextChanged);
             // 
             // label4
             // 

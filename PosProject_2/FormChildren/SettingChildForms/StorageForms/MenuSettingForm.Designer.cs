@@ -37,6 +37,7 @@
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.rdioNameFilter = new System.Windows.Forms.RadioButton();
+            this.btnOpenAddForm = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtFilter
@@ -57,6 +58,7 @@
             this.btnRefresh.TabIndex = 13;
             this.btnRefresh.Text = "Làm mới";
             this.btnRefresh.UseVisualStyleBackColor = true;
+            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // listProduct
             // 
@@ -75,6 +77,7 @@
             this.listProduct.TabIndex = 12;
             this.listProduct.UseCompatibleStateImageBehavior = false;
             this.listProduct.View = System.Windows.Forms.View.Details;
+            this.listProduct.DoubleClick += new System.EventHandler(this.listProduct_DoubleClick);
             // 
             // columnHeader1
             // 
@@ -114,10 +117,21 @@
             this.rdioNameFilter.UseVisualStyleBackColor = true;
             this.rdioNameFilter.CheckedChanged += new System.EventHandler(this.rdioNameFilter_CheckedChanged);
             // 
+            // btnOpenAddForm
+            // 
+            this.btnOpenAddForm.Location = new System.Drawing.Point(410, 348);
+            this.btnOpenAddForm.Name = "btnOpenAddForm";
+            this.btnOpenAddForm.Size = new System.Drawing.Size(89, 30);
+            this.btnOpenAddForm.TabIndex = 17;
+            this.btnOpenAddForm.Text = "Thêm";
+            this.btnOpenAddForm.UseVisualStyleBackColor = true;
+            this.btnOpenAddForm.Click += new System.EventHandler(this.btnOpenAddForm_Click);
+            // 
             // MenuSettingForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(660, 421);
+            this.Controls.Add(this.btnOpenAddForm);
             this.Controls.Add(this.rdioNameFilter);
             this.Controls.Add(this.txtFilter);
             this.Controls.Add(this.btnRefresh);
@@ -141,5 +155,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader4;
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.RadioButton rdioNameFilter;
+        private System.Windows.Forms.Button btnOpenAddForm;
     }
 }

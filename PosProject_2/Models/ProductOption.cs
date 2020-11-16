@@ -120,7 +120,7 @@ namespace PosProject_2.Models
 
         public void txtUnitProd_TextChanged(object sender, EventArgs e)
         {
-            ComboBox txtUnitProd = sender as ComboBox;
+            TextBox txtUnitProd = sender as TextBox;
             if (!Regex.IsMatch(txtUnitProd.Text, @"^[\p{L}\p{M}' \.\-]+$"))
             {
                 txtUnitProd.ForeColor = Color.Red;

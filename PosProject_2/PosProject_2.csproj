@@ -97,6 +97,12 @@
     <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.Designer.cs">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\MaterialSettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\MaterialSettingForm.Designer.cs">
+      <DependentUpon>MaterialSettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChildren\SettingChildForms\StorageForms\MenuSettingForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -198,6 +204,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StaffSettingForm.resx">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\MaterialSettingForm.resx">
+      <DependentUpon>MaterialSettingForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\MenuSettingForm.resx">
       <DependentUpon>MenuSettingForm.cs</DependentUpon>

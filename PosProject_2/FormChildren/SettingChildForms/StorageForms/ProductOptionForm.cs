@@ -40,17 +40,20 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
             productOption.txtPriceProd_TextChanged(text, e);
         }
 
-        private void cbbTypeProd_TextChanged(object sender, EventArgs e)
-        {
-            ComboBox text = sender as ComboBox;
-            productOption.txtUnitProd_TextChanged(text, e);
-        }
-
         private void btnUpdateProd_Click(object sender, EventArgs e)
         {
             List<string> infos = productOption.NewProductInfo(this.txtNameProd.Text, this.txtPriceProd.Text, this.txtUnitProd.Text, this.cbbTypeProd.Text);
-            idMaterials = productOption.idMaterials;
+            idMaterials = productOption.idMaterials;            
             dataContext = new DataPoSContext();
+            List<SanPham> sp = dataContext.SanPhams.ToList();
+            foreach (var item in sp)
+            {
+                if (item.ten_sp.Equals(infos[0]))
+                {
+                    MessageBox.Show("Sản phẩm đã tồn tại hoặc bị trùng tên");
+                    return;
+                }
+            }
             var idType = from typ in dataContext.LoaiSPs
                          where typ.ten_loai.Equals(infos[3])
                          select typ.id_loai;
@@ -78,6 +81,12 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
             sql.OpenCloseConn(query);
             MessageBox.Show("Xóa thành công!");
             this.Close();
+        }
+
+        private void txtUnitProd_TextChanged(object sender, EventArgs e)
+        {
+            TextBox text = sender as TextBox;
+            productOption.txtUnitProd_TextChanged(text, e);
         }
     }
 }

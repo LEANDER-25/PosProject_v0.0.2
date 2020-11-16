@@ -35,12 +35,6 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
             productOption.txtPriceProd_TextChanged(text, e);
         }
 
-        private void cbbTypeProd_TextChanged(object sender, EventArgs e)
-        {
-            ComboBox text = sender as ComboBox;
-            productOption.txtUnitProd_TextChanged(text, e);
-        }
-
         private void btnAddProd_Click(object sender, EventArgs e)
         {
             dataContext = new DataPoSContext();
@@ -80,15 +74,14 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
                 this.txtNameProd.Text = "Thông tin đã tồn tại";
                 return;
             }
-            var typeId = from type in dataContext.LoaiSPs
-                         where type.ten_loai.Equals(info[3])
-                         select type.id_loai;
+            List<LoaiSP> types = dataContext.LoaiSPs.Where(t => t.ten_loai.Equals(info[3])).ToList();
+            int id_current = products[products.Count - 1].id_sp;
             SQLQuery sqlObject = new SQLQuery();
             string query = $"insert into dbo.SanPham (id_sp, ten_sp, giaBan, id_loai, donVi) values (" +
-                $"{products.Count + 1}," +
+                $"{id_current + 1}," +
                 $"N'{info[0]}'," +
                 $"{Int32.Parse(info[1])}," +
-                $"{typeId}," +
+                $"{types[0].id_loai}," +
                 $"N'{info[2]}')";
             sqlObject.OpenCloseConn(query);
             try
@@ -108,6 +101,12 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
             }
             MessageBox.Show("Thêm sản phẩm mới thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);
             this.Close();
+        }
+
+        private void txtUnitProd_TextChanged(object sender, EventArgs e)
+        {
+            TextBox text = sender as TextBox;
+            productOption.txtUnitProd_TextChanged(text, e);
         }
     }
 }

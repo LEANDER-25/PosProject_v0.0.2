@@ -35,5 +35,10 @@ namespace PosProject_2.FormChildren.SettingChildForms
         {
             OpenChildForm(new MenuSettingForm());
         }
+
+        private void btnMaterial_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -828,8 +828,6 @@ namespace PosProject_2
 		
 		private string _ten_nguyenLieu;
 		
-		private System.Nullable<int> _soLuongNhap;
-		
 		private string _donViTinh;
 		
 		private System.Nullable<int> _soLuongLe_1_dvt;
@@ -850,8 +848,6 @@ namespace PosProject_2
     partial void OnidChanged();
     partial void Onten_nguyenLieuChanging(string value);
     partial void Onten_nguyenLieuChanged();
-    partial void OnsoLuongNhapChanging(System.Nullable<int> value);
-    partial void OnsoLuongNhapChanged();
     partial void OndonViTinhChanging(string value);
     partial void OndonViTinhChanged();
     partial void OnsoLuongLe_1_dvtChanging(System.Nullable<int> value);
@@ -905,26 +901,6 @@ namespace PosProject_2
 					this._ten_nguyenLieu = value;
 					this.SendPropertyChanged("ten_nguyenLieu");
 					this.Onten_nguyenLieuChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_soLuongNhap", DbType="Int")]
-		public System.Nullable<int> soLuongNhap
-		{
-			get
-			{
-				return this._soLuongNhap;
-			}
-			set
-			{
-				if ((this._soLuongNhap != value))
-				{
-					this.OnsoLuongNhapChanging(value);
-					this.SendPropertyChanging();
-					this._soLuongNhap = value;
-					this.SendPropertyChanged("soLuongNhap");
-					this.OnsoLuongNhapChanged();
 				}
 			}
 		}

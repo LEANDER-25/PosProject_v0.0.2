@@ -37,7 +37,6 @@
     <Type Name="NguyenLieu">
       <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
       <Column Name="ten_nguyenLieu" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
-      <Column Name="soLuongNhap" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="donViTinh" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />
       <Column Name="soLuongLe_1_dvt" Type="System.Int32" DbType="Int" CanBeNull="true" />
       <Column Name="donViTinhLe" Type="System.String" DbType="NVarChar(10)" CanBeNull="true" />

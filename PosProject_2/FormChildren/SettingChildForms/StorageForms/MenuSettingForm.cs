@@ -90,5 +90,11 @@ namespace PosProject_2.FormChildren.SettingChildForms.StorageForms
                 }
             }
         }
+
+        private void btnOpenAddForm_Click(object sender, EventArgs e)
+        {
+            ProductAddForm productAddForm = new ProductAddForm();
+            productAddForm.ShowDialog();
+        }
     }
 }

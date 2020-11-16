@@ -63,6 +63,7 @@
             this.btnMaterial.TabIndex = 1;
             this.btnMaterial.Text = "Nguyên liệu";
             this.btnMaterial.UseVisualStyleBackColor = true;
+            this.btnMaterial.Click += new System.EventHandler(this.btnMaterial_Click);
             // 
             // btnMenuSetting
             // 
