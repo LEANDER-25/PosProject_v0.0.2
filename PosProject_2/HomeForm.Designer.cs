@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HomeForm));
             this.panel1 = new System.Windows.Forms.Panel();
             this.btnMinimum = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.panelChildFormShow = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.lbStaffPosition = new System.Windows.Forms.Label();
             this.lbCurrentTime = new System.Windows.Forms.Label();
             this.lbStaffName = new System.Windows.Forms.Label();
@@ -42,7 +44,6 @@
             this.btnSetting = new System.Windows.Forms.Button();
             this.btnRevenue = new System.Windows.Forms.Button();
             this.btnLogOut = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1.SuspendLayout();
             this.panelChildFormShow.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -110,6 +111,14 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(971, 89);
             this.panel3.TabIndex = 2;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(739, 46);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(225, 24);
+            this.dateTimePicker1.TabIndex = 7;
             // 
             // lbStaffPosition
             // 
@@ -190,6 +199,7 @@
             this.btnRevenue.TabIndex = 1;
             this.btnRevenue.Text = "Xem Doanh thu";
             this.btnRevenue.UseVisualStyleBackColor = false;
+            this.btnRevenue.Click += new System.EventHandler(this.btnRevenue_Click);
             // 
             // btnLogOut
             // 
@@ -204,14 +214,6 @@
             this.btnLogOut.UseVisualStyleBackColor = false;
             this.btnLogOut.Click += new System.EventHandler(this.btnLogOut_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(739, 46);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(225, 24);
-            this.dateTimePicker1.TabIndex = 7;
-            // 
             // HomeForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
@@ -221,6 +223,7 @@
             this.Controls.Add(this.panelChildFormShow);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "HomeForm";

@@ -36,6 +36,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -73,6 +74,30 @@
     <Compile Include="FormChildren\PayAction.Designer.cs">
       <DependentUpon>PayAction.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormChildren\RevenueForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForm.Designer.cs">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ChartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ChartForm.Designer.cs">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ExportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ExportForm.Designer.cs">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ImportBillsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\RevenueForms\ImportBillsForm.Designer.cs">
+      <DependentUpon>ImportBillsForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormChildren\SearchResultForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +121,12 @@
     </Compile>
     <Compile Include="FormChildren\SettingChildForms\StaffSettingForm.Designer.cs">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChildren\SettingChildForms\StorageForms\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormChildren\SettingChildForms\StorageForms\MaterialSettingForm.cs">
       <SubType>Form</SubType>
@@ -154,6 +185,12 @@
     <Compile Include="Models\ElipseControl.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Models\ImportMaterial.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Models\ImportMaterial.Designer.cs">
+      <DependentUpon>ImportMaterial.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\ItemComponent.cs" />
     <Compile Include="Models\ItemPayDetail.cs" />
     <Compile Include="Models\MaterialCard.cs">
@@ -193,6 +230,18 @@
     <EmbeddedResource Include="FormChildren\PayAction.resx">
       <DependentUpon>PayAction.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\RevenueForm.resx">
+      <DependentUpon>RevenueForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\RevenueForms\ChartForm.resx">
+      <DependentUpon>ChartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\RevenueForms\ExportForm.resx">
+      <DependentUpon>ExportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\RevenueForms\ImportBillsForm.resx">
+      <DependentUpon>ImportBillsForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SearchResultForm.resx">
       <DependentUpon>SearchResultForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -204,6 +253,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StaffSettingForm.resx">
       <DependentUpon>StaffSettingForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChildren\SettingChildForms\StorageForms\MaterialSettingForm.resx">
       <DependentUpon>MaterialSettingForm.cs</DependentUpon>
@@ -231,6 +283,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Models\AreaButton.resx">
       <DependentUpon>AreaButton.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Models\ImportMaterial.resx">
+      <DependentUpon>ImportMaterial.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Models\MaterialCard.resx">
       <DependentUpon>MaterialCard.cs</DependentUpon>
@@ -278,6 +333,8 @@
     <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Models\Assets\developing.png" />
+    <Content Include="Models\Assets\logoPoS.ico" />
     <Content Include="Models\Assets\searchIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

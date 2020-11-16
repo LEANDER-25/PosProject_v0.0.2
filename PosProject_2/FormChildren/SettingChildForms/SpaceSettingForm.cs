@@ -197,10 +197,12 @@ namespace PosProject_2.FormChildren.SettingChildForms
                 this.txtTable.Text = $"Bàn {text} đã tồn tại";
                 return;
             }
+            List<BanAn> eTables = dataContext.BanAns.ToList();
+            int idTable = eTables[tables.Count - 1].id + 1;
             var idArea = from area in dataContext.KhuVucs
                          where area.ten_khuVuc.Equals(textArea)
                          select area.id;
-            string query = $"insert into dbo.BanAn (id, ten_ban, id_khuVuc) values ({tables.Count + 1}, N'{text}', {idArea.First()})";
+            string query = $"insert into dbo.BanAn (id, ten_ban, id_khuVuc) values ({idTable}, N'{text}', {idArea.First()})";
             SQLQuery sqlOject = new SQLQuery();
             sqlOject.OpenCloseConn(query);
             MessageBox.Show("Thêm bàn thành công!", "Thông tin", MessageBoxButtons.OK, MessageBoxIcon.Information);

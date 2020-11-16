@@ -27,3 +27,9 @@ C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.Mode
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.ProductAddForm.resources
 C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.ProductOptionForm.resources
 C:\Users\ACER\source\repos\PosProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.MaterialSettingForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.SettingChildForms.StorageForms.ImportForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.Models.ImportMaterial.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.RevenueForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.RevenueForms.ExportForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.RevenueForms.ImportBillsForm.resources
+C:\Users\ACER\source\repos\PoSProject_2\PosProject_2\obj\Debug\PosProject_2.FormChildren.RevenueForms.ChartForm.resources

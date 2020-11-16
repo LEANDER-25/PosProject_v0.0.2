@@ -61,11 +61,28 @@ namespace PosProject_2.Models
         {
 
         }
-        public ItemBill(int id, int idStaff, DateTime saleDate, int totalCash)
+        public ItemBill(int id, int idStaff, DateTime saleDate, List<ItemSaleDetail> saleDetails)
         {
             this.ID = id;
             this.IDStaff = idStaff;
             this.SaleDate = saleDate;
+            int totalCash = 0;
+            foreach (var item in saleDetails)
+            {
+                totalCash += item.ToCash;
+            }
+            this.TotalCash = totalCash;
+        }
+        public ItemBill(int id, int idStaff, DateTime saleDate, List<ItemImportDetail> importDetails)
+        {
+            this.ID = id;
+            this.IDStaff = idStaff;
+            this.SaleDate = saleDate;
+            int totalCash = 0;
+            foreach (var item in importDetails)
+            {
+                totalCash += item.ToCash;
+            }
             this.TotalCash = totalCash;
         }
 
@@ -79,11 +96,14 @@ namespace PosProject_2.Models
         {
 
         }
-        public ItemSaleDetail(int idBill, int idProduct, string nameProduct, int amount, int idType, int price, int toCash) : base(idProduct, nameProduct, idType, price)
+        public ItemSaleDetail(int idBill, int id, string name, int price,int amount)
         {
             this.IDBill = idBill;
+            this.ID = id;
+            this.Name = name;
+            this.Price = price;
             this.Amount = amount;
-            this.ToCash = toCash;
+            this.ToCash = Price * Amount;
         }
 
     }
@@ -102,6 +122,22 @@ namespace PosProject_2.Models
             this.Name = name;
             this.Amount = amount;
             this.Price = price;
+        }
+    }
+    public class ItemImportDetail : ItemSaleDetail
+    {
+        public ItemImportDetail()
+        {
+
+        }
+        public ItemImportDetail(int idBill, int id, string name, int amount, int price)
+        {
+            this.IDBill = idBill;
+            this.ID = id;
+            this.Name = name;
+            this.Amount = amount;
+            this.Price = price;
+            this.ToCash = this.Amount * this.Price;
         }
     }
 }

@@ -38,7 +38,12 @@ namespace PosProject_2.FormChildren.SettingChildForms
 
         private void btnMaterial_Click(object sender, EventArgs e)
         {
+            OpenChildForm(new MaterialSettingForm());
+        }
 
+        private void btnImportGoods_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new ImportForm());
         }
     }
 }

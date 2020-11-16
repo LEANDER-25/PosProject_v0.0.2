@@ -119,6 +119,7 @@ namespace PosProject_2.FormChildren
         }
         void FlowLoadData()
         {
+            this.flowSelectProduct.Controls.Clear();
             List<CacBanCoDon> orderedTables = dataContext.CacBanCoDons.Where(t => t.id_ban == this.IDThisTable).ToList();
             if(orderedTables.Count != 0)
             {
@@ -271,7 +272,7 @@ namespace PosProject_2.FormChildren
                             }
                         }
                     }
-                    else if (ordereds.Count >= savedItems.Count)
+                    else if (ordereds.Count > savedItems.Count)
                     {
                         for (int i = 0; i < savedItems.Count; i++)
                         {
@@ -332,7 +333,7 @@ namespace PosProject_2.FormChildren
                                 UpdateMaterialTable(item.Key, item.Value, connection);
                             }
                             usedMaterials = new List<CustomDic>();
-                            for (int i = savedItems.Count - 1; i < ordereds.Count; i++)
+                            for (int i = savedItems.Count; i < ordereds.Count; i++)
                             {
                                 InsertInTemp_NoConn(ordereds[i], connection);
                                 CalUsedMaterialAmount(ordereds[i].ID, ordereds[i].Amount, ref usedMaterials);

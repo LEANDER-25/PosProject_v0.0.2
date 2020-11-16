@@ -118,7 +118,7 @@ namespace PosProject_2
             AreaButton btn = sender as AreaButton;
             TablesForm tablesForm = new TablesForm(Int32.Parse(btn.Name));
             stackForms.Push(tablesForm);
-            OpenTablesForm(tablesForm);
+            OpenTablesForm(stackForms.Peek());
         }
 
         private void btnSetting_Click(object sender, EventArgs e)
@@ -130,7 +130,7 @@ namespace PosProject_2
             {
                 SettingForm settingForm = new SettingForm();
                 stackForms.Push(settingForm);
-                OpenTablesForm(settingForm);
+                OpenTablesForm(stackForms.Peek());
                 return;
             }
             else
@@ -164,6 +164,13 @@ namespace PosProject_2
             {
                 this.WindowState = FormWindowState.Minimized;
             }
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            RevenueForm revenueForm = new RevenueForm();
+            stackForms.Push(revenueForm);
+            OpenTablesForm(stackForms.Peek());
         }
     }
     public enum StaffState

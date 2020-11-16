@@ -54,6 +54,7 @@
             this.btnImportGoods.TabIndex = 2;
             this.btnImportGoods.Text = "Nhập hàng";
             this.btnImportGoods.UseVisualStyleBackColor = true;
+            this.btnImportGoods.Click += new System.EventHandler(this.btnImportGoods_Click);
             // 
             // btnMaterial
             // 
